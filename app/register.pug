@@ -1,0 +1,59 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "register";
+
+block header
+  header#header.header
+    .container
+      .header-logo
+        a(href="home.html")
+          img(src="images/logo-revver.png", alt="logo")
+
+block content
+  .login
+    .container
+      .row.justify-content-center
+        .col-lg-8
+          .authbox
+            .authbox-title
+              h1 Create Account
+              p Don't have an account yet? Register here!
+            form(action="#")
+              .form-group
+                label Full Name
+                input.form-control(type="text" placeholder="John Doe")
+              .form-group
+                label Username
+                input.form-control(type="text" placeholder="johndoe")
+              .form-group
+                label Revver ID
+                input.form-control(type="text" placeholder="123456")
+              .form-group
+                label Email
+                input.form-control(type="email" placeholder="email@email.com")
+              .form-group
+                label Phone
+                input.form-control(type="text" placeholder="081234567890")
+              .form-group
+                label Sponsor ID
+                input.form-control(type="text" placeholder="123456")
+              .form-group.passfield
+                label Password
+                input.form-control(type="password" placeholder="email@email.com")
+                span.showhide
+              .form-group.passfield
+                label Password
+                input.form-control(type="password" placeholder="")
+                span.showhide
+              .form-group.passfield
+                label Confirm Password
+                input.form-control(type="password" placeholder="")
+                span.showhide
+              .form-action
+                button.btn.btn-primary.btn-block(type="submit") Register
+                .notes
+                  p Already have an account?
+                    a(href="login.html") Please, login!
+
+block footer

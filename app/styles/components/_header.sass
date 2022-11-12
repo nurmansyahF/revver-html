@@ -1,0 +1,44 @@
+/* Header */
+.header
+  .container
+    padding-top: 30px
+    padding-bottom: 30px
+    border-bottom: 1px solid $border
+    .row
+      align-items: center
+  &-logo
+    max-height: 60px
+    img
+      width: auto
+      max-height: 60px
+      object-fit: contain
+      object-position: center
+  &-right
+    display: flex
+    justify-content: flex-end
+  &-menu
+    position: relative
+    margin-right: 50px
+    &:after
+      content: ""
+      display: block
+      width: 1px
+      height: 32px
+      background: $text
+      position: absolute
+      top: -8px
+      right: 0
+    &_item
+      color: $text
+      transition: all .3s ease-in-out
+      padding-right: 48px
+      text-decoration: none
+      &:hover
+        color: $primary
+  &-icon
+    .icon
+      color: $text
+      &:not(:last-child)
+        margin-right: 32px
+      &:hover
+        color: $primary

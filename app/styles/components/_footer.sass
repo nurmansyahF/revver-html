@@ -1,0 +1,63 @@
+/* Footer */
+.footer
+  background: #F0A500
+  &-top
+    .container
+      padding-top: 4.5rem
+      padding-bottom: 4.5rem
+      border-bottom: 1px solid #A7A7A7
+  &-logo
+    max-height: 100px
+    margin-bottom: 32px
+    a
+      display: block
+      max-width: max-content
+    img
+      max-height: 100px
+      object-fit: contain
+      object-position: center
+  &-desc
+    max-width: 380px
+    margin-bottom: 48px
+  &-socmed
+    .ic-socmed
+      // background: #FFF
+      display: inline-block
+      &:not(:last-child)
+        margin-right: 24px
+      .fa-brands
+        color: #2D9CDB
+        opacity: .5
+        font-size: 52px
+        line-height: 1em
+  &-contact
+    text-align: right
+    ul
+      list-style: none
+      padding-left: 0
+      li
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        &:not(:last-child)
+          margin-bottom: 16px
+        a
+          color: $text
+        .ic-contact
+          display: inline-block
+          margin-left: 8px
+          color: #2D9CDB
+  &-bottom
+    padding: 40px 0
+    .copyright
+      font-size: 14px
+      line-height: 1.5em
+    .payment
+      text-align: right
+      .icon
+        width: 32px
+        height: 32px
+        display: inline-block
+        vertical-align: middle
+        &:not(:last-child)
+          margin-right: 16px

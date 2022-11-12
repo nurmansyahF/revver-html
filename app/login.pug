@@ -1,0 +1,39 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "login";
+
+block header
+  header#header.header
+    .container
+      .header-logo
+        a(href="home.html")
+          img(src="images/logo-revver.png", alt="logo")
+
+block content
+  .login
+    .container
+      .row.justify-content-center
+        .col-lg-8
+          .authbox
+            .authbox-title
+              h1 Login
+              p Already have an account? Please, login!
+            form(action="home.html")
+              .form-group
+                label Email
+                input.form-control(type="email" placeholder="email@email.com")
+              .form-group.passfield
+                label Password
+                input.form-control(type="password" placeholder="email@email.com")
+                span.showhide
+              .form-action
+                button.btn.btn-primary.btn-block(type="submit") Login
+                .form-check.custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" id="rememberMe")
+                  label.custom-control-label(for="rememberMe") Remember Me
+                .notes
+                  p Don't have an account yet?
+                    a(href="register.html") Register here!
+
+block footer

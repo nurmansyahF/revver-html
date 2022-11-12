@@ -1,0 +1,149 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "home";
+
+
+block content
+  .homepage
+    .container
+      .page-title
+        h1 Hi Revver,
+          span How are you today?
+
+      section.homepage-masthead
+        .slider
+          .slider-item
+            img(src="images/masthead-dummy.png", alt="masthead")
+            .slider-text
+              h2 Better Devices for Better Life 1
+          .slider-item
+            img(src="images/masthead-dummy.png", alt="masthead")
+            .slider-text
+              h2 Better Devices for Better Life 2
+          .slider-item
+            img(src="images/masthead-dummy.png", alt="masthead")
+            .slider-text
+              h2 Better Devices for Better Life 3
+    section.innerMenu
+      .container
+        .row
+          .col
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-clipboard
+              span Note
+          .col
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-book
+              span E-Learning
+          .col
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-paper-plane
+              span Plan
+          .col
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-stethoscope
+              span E-Health
+          .col
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-trophy
+              span Goals
+          .col
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-people-group
+              span Support
+          .col
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-chart-pie
+              span Report
+          .col
+            a.innerMenu-item(href="#")
+              .icon
+                img(src="images/revver-icon.png")
+              span Revver
+
+    section.card-products
+      .container
+        .section-title.wtitle
+          h2 Our Products
+          a.viewall(href="all-product.html") View All
+        .row
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text
+                .title Smartphone 5G
+                .price $299.00
+                a.btn.btn-primary.btn-small(href="#") Add to Cart
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text
+                .title Smartphone 5G
+                .price $299.00
+                a.btn.btn-primary.btn-small(href="#") Add to Cart
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text
+                .title Smartphone 5G
+                .price $299.00
+                a.btn.btn-primary.btn-small(href="#") Add to Cart
+
+    section.card-products
+      .container
+        .section-title.wtitle
+          h2 News & Updates
+          a.viewall(href="news-update.html") View All
+        .row
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text.text-left
+                .title We Offer the Best Quality Product to Our Customers
+                .authdate
+                  span.auth by&nbsp;
+                    a(href="#") Admin
+                  | , &nbsp;
+                  span.date 12 Jan 2021
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text.text-left
+                .title We Offer the Best Quality Product to Our Customers
+                .authdate
+                  span.auth by&nbsp;
+                    a(href="#") Admin
+                  | , &nbsp;
+                  span.date 12 Jan 2021
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text.text-left
+                .title We Offer the Best Quality Product to Our Customers
+                .authdate
+                  span.auth by&nbsp;
+                    a(href="#") Admin
+                  | , &nbsp;
+                  span.date 12 Jan 2021
+
+

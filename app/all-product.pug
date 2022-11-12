@@ -1,0 +1,108 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "allproducts";
+
+
+block content
+  .allproducts
+    .container
+      .page-title.text-center
+        h1 Products
+
+    section.innerMenu.bordered
+      .container
+        .row
+          .col-2
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-earth-americas
+              span All Categories
+          .col-2
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-briefcase-medical
+              span Health
+          .col-2
+            a.innerMenu-item(href="#")
+              .icon
+                i.fa-solid.fa-laptop
+              span Electronic
+
+
+    section.card-products
+      .container
+        .row
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text
+                .title Smartphone 5G
+                .price $299.00
+                a.btn.btn-primary.btn-small(href="#") Add to Cart
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text
+                .title Smartphone 5G
+                .price $299.00
+                a.btn.btn-primary.btn-small(href="#") Add to Cart
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text
+                .title Smartphone 5G
+                .price $299.00
+                a.btn.btn-primary.btn-small(href="#") Add to Cart
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text
+                .title Smartphone 5G
+                .price $299.00
+                a.btn.btn-primary.btn-small(href="#") Add to Cart
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text
+                .title Smartphone 5G
+                .price $299.00
+                a.btn.btn-primary.btn-small(href="#") Add to Cart
+          .col-md-4
+            .card
+              .thumbnail
+                a(href="#")
+                  img(src="images/thumbnail-dummy.jpg", alt="img")
+              .text
+                .title Smartphone 5G
+                .price $299.00
+                a.btn.btn-primary.btn-small(href="#") Add to Cart
+
+    section.pagination
+      .container
+        .pagination-wrap
+          .pagination-item.prev
+            a(href="#")
+              img(src="images/ic-chevron-left-white.png", alt="icon")
+          .pagination-item.active
+            a(href="#")
+              span 1
+          .pagination-item
+            a(href="#")
+              span 2
+          .pagination-item
+            a(href="#")
+              span 3
+          .pagination-item.next
+            a(href="#")
+              img(src="images/ic-chevron-right-white.png", alt="icon")
