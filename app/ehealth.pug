@@ -1,0 +1,41 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "ehealth";
+
+block header
+  header#header.header
+    .container
+      .header-logo
+        a(href="home.html")
+          img(src="images/logo-revver.png", alt="logo")
+
+block content
+  .ehealth
+    .container
+      .row.justify-content-center
+        .col-lg-8
+          .ehealth-title
+            h1 E-Health
+          .ehealth-box
+            form(action="#")
+              .form-group
+                label Name
+                input.form-control(type="text" placeholder="Enter your name")
+              .form-group
+                label Gender
+                select.select(title="Male / Female")
+                  option(value="0") Male
+                  option(value="1") Female
+              .form-group
+                label Height
+                input.form-control(type="text" placeholder="eg: 160")
+              .form-group
+                label Weight
+                input.form-control(type="text" placeholder="eg: 60")
+              .form-group
+                label Age
+                input.form-control(type="text" placeholder="eg: 20")
+              .form-action
+                button.btn.btn-primary.btn-block(type="submit") Next
+

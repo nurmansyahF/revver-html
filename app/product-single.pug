@@ -1,0 +1,27 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "allproducts";
+
+
+block content
+  .product-signle
+    .container
+      .row
+        .col-md-6
+          #bigimgSlider
+            .products__detail-bigimg
+              a(href="images/thumbnail-dummy.jpg" data-lity)
+          .products__detail-thumbnails.slider.owl-carousel(data-items="3" data-loop="no" data-width="fix" data-auto="no" data-nav="no" data-dot="no")
+            .products__detail-thumbnail.active(data-index="0")
+              img(src="images/thumbnail-dummy.jpg", alt="img")
+            .products__detail-thumbnail(data-index="1")
+              img(src="images/thumbnail-dummy.jpg", alt="img")
+            .products__detail-thumbnail(data-index="2")
+              img(src="images/thumbnail-dummy.jpg", alt="img")
+            .products__detail-thumbnail(data-index="3")
+              img(src="images/thumbnail-dummy.jpg", alt="img")
+
+
+
+

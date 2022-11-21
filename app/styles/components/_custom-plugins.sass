@@ -207,3 +207,74 @@ body.modal-open
   background: rgba(27, 29, 30, 0.8)
   z-index: 10
   transition: all .3s ease
+
+// Select
+.bootstrap-select
+  position: relative
+  width: 100%
+  & > .dropdown-toggle
+    position: relative
+    color: $text
+    background: #FFF
+    border: 1px solid $border
+    padding: 0.857rem 2rem 0.857rem 0.857rem
+    height: 60px
+    &:after
+      content: ""
+      display: block
+      width: 0.875rem
+      height: 0.875rem
+      background: url(../images/ic-cevron-down.png)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      position: absolute
+      border: 0
+      right: 0.75rem
+      top: calc(50% - 0.4375rem)
+    &:hover
+      color: $text
+      background: $border
+    &:focus
+      color: $text
+      outline: none !important
+  .btn
+
+  .dropdown-menu
+    width: 100%
+    min-width: 180px
+    box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 6px 16px rgba(0, 0, 0, 0.08), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+    // border: 1px solid $border
+  .no-results
+    white-space: initial
+    word-break: break-all
+
+  .bs-ok-default:after
+    border-width: 0 .1em .1em 0
+    border-color: $primary
+  &.show-tick .dropdown-menu .selected span.check-mark
+    top: 0.5rem
+.form-group .bootstrap-select .btn
+  padding: 0.889rem !important
+select.select
+  display: block
+  width: 100%
+  height: 2.5rem
+  border: 1px solid $border
+  border-radius: 0.25rem
+  padding: 0.5rem 0.75rem
+  opacity: 0
+.form-group .bootstrap-select,
+.form-horizontal .bootstrap-select,
+.form-inline .bootstrap-select
+  .btn
+    padding: 8px 12px
+    border-radius: 6px
+    &:focus,
+    &:visited,
+    &:focus-within
+      box-shadow: none !important
+      outline: none !important
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+  width: 100%
+

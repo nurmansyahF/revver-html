@@ -1,0 +1,16 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "pan";
+
+
+block content
+  .elearning
+    .container
+      .page-title.text-center
+        h1 Plan
+
+      section.elearing-content_pdf
+        object.pdfwrap(data='https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf' width='100%' sheight='900')
+
+

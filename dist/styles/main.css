@@ -17,19 +17,21 @@ p:last-child { margin-bottom: 0; }
 
 h1, h2, h3, h4 { margin: 0 0 30px; font-family: 'Montserrat', sans-serif; font-weight: 700; -webkit-font-variant-ligatures: common-ligatures; -moz-font-variant-ligatures: common-ligatures; font-variant-ligatures: common-ligatures; -webkit-font-feature-settings: "liga","clig"; -moz-font-feature-settings: "liga","clig"; font-feature-settings: "liga","clig"; }
 
-h1 { font-size: 48px; line-height: 1.2em; }
+h1 { font-size: 56px; line-height: 1.2em; }
 
 @media (max-width: 1600px) { h1 { font-size: 32px; line-height: 1.2em; } }
 
-h2 { font-size: 32px; line-height: 48px; }
+h2 { font-size: 48px; line-height: 1.2em; }
 
 @media (max-width: 1600px) { h2 { font-size: 26px; line-height: 31px; } }
 
-h3 { font-size: 24px; line-height: 32px; }
+h3 { font-size: 36px; line-height: 1.2em; }
 
 @media (max-width: 1600px) { h3 { font-size: 21px; line-height: 32px; } }
 
-h4 { font-size: 16px; line-height: 26px; }
+h4 { font-size: 24px; line-height: 1.5em; }
+
+h5 { font-size: 18px; line-height: 1.5em; }
 
 .lead p { font-size: 21px; line-height: 32px; }
 
@@ -236,6 +238,34 @@ body.modal-open .header { z-index: 9; }
 
 .modal-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(27, 29, 30, 0.8); z-index: 10; transition: all .3s ease; }
 
+.bootstrap-select { position: relative; width: 100%; }
+
+.bootstrap-select > .dropdown-toggle { position: relative; color: #000000; background: #FFF; border: 1px solid #DBDBDB; padding: 0.857rem 2rem 0.857rem 0.857rem; height: 60px; }
+
+.bootstrap-select > .dropdown-toggle:after { content: ""; display: block; width: 0.875rem; height: 0.875rem; background: url(../images/ic-cevron-down.png); background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; border: 0; right: 0.75rem; top: calc(50% - 0.4375rem); }
+
+.bootstrap-select > .dropdown-toggle:hover { color: #000000; background: #DBDBDB; }
+
+.bootstrap-select > .dropdown-toggle:focus { color: #000000; outline: none !important; }
+
+.bootstrap-select .dropdown-menu { width: 100%; min-width: 180px; box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 6px 16px rgba(0, 0, 0, 0.08), 0px 3px 6px -4px rgba(0, 0, 0, 0.12); }
+
+.bootstrap-select .no-results { white-space: initial; word-break: break-all; }
+
+.bootstrap-select .bs-ok-default:after { border-width: 0 .1em .1em 0; border-color: #F0A500; }
+
+.bootstrap-select.show-tick .dropdown-menu .selected span.check-mark { top: 0.5rem; }
+
+.form-group .bootstrap-select .btn { padding: 0.889rem !important; }
+
+select.select { display: block; width: 100%; height: 2.5rem; border: 1px solid #DBDBDB; border-radius: 0.25rem; padding: 0.5rem 0.75rem; opacity: 0; }
+
+.form-group .bootstrap-select .btn, .form-horizontal .bootstrap-select .btn, .form-inline .bootstrap-select .btn { padding: 8px 12px; border-radius: 6px; }
+
+.form-group .bootstrap-select .btn:focus, .form-group .bootstrap-select .btn:visited, .form-group .bootstrap-select .btn:focus-within, .form-horizontal .bootstrap-select .btn:focus, .form-horizontal .bootstrap-select .btn:visited, .form-horizontal .bootstrap-select .btn:focus-within, .form-inline .bootstrap-select .btn:focus, .form-inline .bootstrap-select .btn:visited, .form-inline .bootstrap-select .btn:focus-within { box-shadow: none !important; outline: none !important; }
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) { width: 100%; }
+
 /* General */
 @media (min-width: 1200px) { .container { max-width: 1248px; } }
 
@@ -260,6 +290,22 @@ button:focus, a:focus { outline: none !important; }
 .btn-small { padding: 12px 28px; }
 
 .icon { width: 80px; height: 80px; background-position: center; background-size: contain; background-repeat: no-repeat; }
+
+.icon-med { width: 56px; height: 56px; background-position: center; background-size: contain; background-repeat: no-repeat; }
+
+.icon-med.notif-review { background: url(../images/ic-notif-review.png) no-repeat center; background-size: contain; }
+
+.icon-med.notif-event { background: url(../images/ic-notif-event.png) no-repeat center; background-size: contain; }
+
+.icon-med.notif-event-bell { background: url(../images/ic-notif-event-bell.png) no-repeat center; background-size: contain; }
+
+.ic { width: 24px; height: 24px; display: inline-block; vertical-align: middle; }
+
+.ic.ic-calendar { background: url(../images/ic-calendar.svg) no-repeat center; background-size: contain; }
+
+.ic.ic-user { background: url(../images/ic-user.svg) no-repeat center; background-size: contain; }
+
+.ic.ic-sharenode { background: url(../images/ic-share-node.svg) no-repeat center; background-size: contain; }
 
 .page-numbers { text-align: center; margin: 0 auto 120px; }
 
@@ -343,7 +389,11 @@ button:focus, a:focus { outline: none !important; }
 
 .card-products .card .text { text-align: center; padding: 22px; font-size: 1.333rem; line-height: 1.5em; }
 
-.card-products .card .text .title { margin-bottom: 8px; font-weight: 500; }
+.card-products .card .text .title { font-size: 24px; line-height: 36px; margin-bottom: 8px; font-weight: 500; }
+
+.card-products .card .text .title a { color: #000000; text-decoration: none; }
+
+.card-products .card .text .title a:hover { color: #F0A500; }
 
 .card-products .card .text .price { font-weight: 700; }
 
@@ -467,6 +517,12 @@ button:focus, a:focus { outline: none !important; }
 
 .authbox-title p { color: #A7A7A7; }
 
+.ehealth { padding-bottom: 80px; }
+
+.ehealth-title { text-align: center; margin-bottom: 80px; }
+
+.ehealth-box { padding: 56px 136px; border: 1px solid #DBDBDB; max-width: 780px; margin: 0 auto; border-radius: 32px; }
+
 .homepage { padding-bottom: 40px; }
 
 .homepage h1 { font-size: 3.111rem; line-height: 1.2em; }
@@ -484,6 +540,50 @@ button:focus, a:focus { outline: none !important; }
 .homepage-masthead .slider-text h2 { font-size: 3.111rem; line-height: 1.2em; }
 
 .newsupdate, .allproducts { padding-bottom: 40px; }
+
+.newsupdate-detail .meta, .allproducts-detail .meta { display: -webkit-flex; display: -ms-flexbox; display: flex; margin-bottom: 40px; }
+
+.newsupdate-detail .meta-item, .allproducts-detail .meta-item { color: #A7A7A7; }
+
+.newsupdate-detail .meta-item:not(:last-child), .allproducts-detail .meta-item:not(:last-child) { margin-right: 24px; }
+
+.newsupdate-detail .meta-item .ic, .allproducts-detail .meta-item .ic { margin-right: 8px; }
+
+.newsupdate-detail_content .masthead_image, .allproducts-detail_content .masthead_image { margin-bottom: 40px; }
+
+.newsupdate-detail_content .masthead_image img, .allproducts-detail_content .masthead_image img { display: block; }
+
+.newsupdate-detail_content article, .allproducts-detail_content article { margin-bottom: 64px; }
+
+.newsupdate-detail_content .share-article, .allproducts-detail_content .share-article { padding: 38px 42px; border-radius: 8px; border: 1px solid #DBDBDB; text-align: right; margin-bottom: 40px; }
+
+.elearing-content_pdf, .elearing-content_video { padding-bottom: 40px; margin-bottom: 40px; }
+
+.elearing-content_pdf .pdfwrap, .elearing-content_video .pdfwrap { height: 900px; }
+
+.notif-page { padding-bottom: 80px; }
+
+.notif-page .nav-tabs { border-bottom: 0; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 80px; }
+
+.notif-page .nav-tabs .nav-item:not(:last-child) { margin-right: 40px; }
+
+.notif-page .nav-tabs .nav-item .nav-link { border: 0; color: #000; opacity: 0.5; padding: 0; }
+
+.notif-page .nav-tabs .nav-item .nav-link.active { font-weight: 600; color: #F0A500; opacity: 1; border-bottom: 1px solid #F0A500; }
+
+.notif-page .nav-tabs .nav-item .nav-link:hover { color: #F0A500; }
+
+.notif-page .notif-item { display: block; color: #000000; text-decoration: none; }
+
+.notif-page .notif-item:not(:last-child) { margin-bottom: 32px; }
+
+.notif-page .notif-item:hover .notif-item_title b { color: #F0A500; }
+
+.notif-page .notif-item_title { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-bottom: 24px; }
+
+.notif-page .notif-item_title b { font-weight: 500; }
+
+.notif-page .notif-item_title .icon-med { margin-right: 16px; }
 
 /* Responsive */
 

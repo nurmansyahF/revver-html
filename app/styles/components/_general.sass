@@ -57,6 +57,38 @@ a
   background-position: center
   background-size: contain
   background-repeat: no-repeat
+  &-med
+    width: 56px
+    height: 56px
+    background-position: center
+    background-size: contain
+    background-repeat: no-repeat
+    &.notif-review
+      background: url(../images/ic-notif-review.png) no-repeat center
+      background-size: contain
+    &.notif-event
+      background: url(../images/ic-notif-event.png) no-repeat center
+      background-size: contain
+    &.notif-event-bell
+      background: url(../images/ic-notif-event-bell.png) no-repeat center
+      background-size: contain
+
+
+
+.ic
+  width: 24px
+  height: 24px
+  display: inline-block
+  vertical-align: middle
+  &.ic-calendar
+    background: url(../images/ic-calendar.svg) no-repeat center
+    background-size: contain
+  &.ic-user
+    background: url(../images/ic-user.svg) no-repeat center
+    background-size: contain
+  &.ic-sharenode
+    background: url(../images/ic-share-node.svg) no-repeat center
+    background-size: contain
 
 .page-numbers
   text-align: center
@@ -228,8 +260,15 @@ a
       font-size: 1.333rem
       line-height: 1.5em
       .title
+        font-size: 24px
+        line-height: 36px
         margin-bottom: 8px
         font-weight: 500
+        a
+          color: #000000
+          text-decoration: none
+          &:hover
+            color: $primary
       .price
         font-weight: 700
       .btn

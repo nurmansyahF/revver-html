@@ -1,7 +1,8 @@
 /* Contents */
 
 // Auth
-.authbox
+.authbox,
+
   max-width: 780px
   margin: 0 auto 10rem
   padding: 80px
@@ -13,6 +14,19 @@
       margin-bottom: 24px
     p
       color: $secn-text
+
+
+.ehealth
+  padding-bottom: 80px
+  &-title
+    text-align: center
+    margin-bottom: 80px
+  &-box
+    padding: 56px 136px
+    border: 1px solid $border
+    max-width: 780px
+    margin: 0 auto
+    border-radius: 32px
 
 
 // Homepage
@@ -55,3 +69,85 @@
 .newsupdate,
 .allproducts
   padding-bottom: 40px
+  &-detail
+    .meta
+      display: flex
+      margin-bottom: 40px
+      &-item
+        color: #A7A7A7
+        &:not(:last-child)
+          margin-right: 24px
+        .ic
+          margin-right: 8px
+    &_content
+      .masthead_image
+        margin-bottom: 40px
+        img
+          display: block
+      article
+        margin-bottom: 64px
+      .share-article
+        padding: 38px 42px
+        border-radius: 8px
+        border: 1px solid #DBDBDB
+        text-align: right
+        margin-bottom: 40px
+
+// Product Single
+.product-single
+
+// Elearning
+.elearing
+  &-content
+    &_pdf,
+    &_video
+      padding-bottom: 40px
+      margin-bottom: 40px
+      .pdfwrap
+        height: 900px
+    &_video
+
+// Notif Page
+.notif-page
+  padding-bottom: 80px
+  .nav-tabs
+    border-bottom: 0
+    justify-content: center
+    margin-bottom: 80px
+    .nav-item
+      &:not(:last-child)
+        margin-right: 40px
+      .nav-link
+        border: 0
+        color: #000
+        opacity: 0.5
+        padding: 0
+        &.active
+          font-weight: 600
+          color: $primary
+          opacity: 1
+          border-bottom: 1px solid $primary
+        &:hover
+          color: $primary
+
+  .notif-item
+    display: block
+    color: $text
+    text-decoration: none
+    &:not(:last-child)
+      margin-bottom: 32px
+    &:hover
+      .notif-item_title
+        b
+          color: $primary
+    &_title
+      display: flex
+      align-items: center
+      margin-bottom: 24px
+      b
+        font-weight: 500
+      .icon-med
+        margin-right: 16px
+
+
+

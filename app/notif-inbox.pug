@@ -1,0 +1,67 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "notif";
+
+
+block content
+  .notif-page
+    .container
+      ul#notifTab.nav.nav-tabs(role='tablist')
+        li.nav-item
+          a#notif-tab.nav-link.active(data-toggle='tab' href='#notif' role='tab' aria-controls='notif' aria-selected='true') Notification (99)
+        li.nav-item
+          a#inbox-tab.nav-link(data-toggle='tab' href='#inbox' role='tab' aria-controls='inbox' aria-selected='false') Inbox (99)
+      #notifTabContent.tab-content
+        #notif.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='notif-tab')
+          .notif-wrap
+            a.notif-item(href="#")
+              .notif-item_title
+                .icon-med.notif-review
+                b Vital Sign Review
+              .notif-misc
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            a.notif-item(href="#")
+              .notif-item_title
+                .icon-med.notif-review
+                b Vital Sign Review
+              .notif-misc
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            a.notif-item(href="#")
+              .notif-item_title
+                .icon-med.notif-event
+                b Event
+              .notif-misc
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            a.notif-item(href="#")
+              .notif-item_title
+                .icon-med.notif-event
+                b Event
+              .notif-misc
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        #inbox.tab-pane.fade(role='tabpanel' aria-labelledby='inbox-tab')
+          .notif-wrap
+            a.notif-item(href="#")
+              .notif-item_title
+                .icon-med.notif-event-bell
+                b Event
+              .notif-misc
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            a.notif-item(href="#")
+              .notif-item_title
+                .icon-med.notif-event-bell
+                b Event
+              .notif-misc
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            a.notif-item(href="#")
+              .notif-item_title
+                .icon-med.notif-event-bell
+                b Event
+              .notif-misc
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            a.notif-item(href="#")
+              .notif-item_title
+                .icon-med.notif-event-bell
+                b Event
+              .notif-misc
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.

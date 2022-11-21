@@ -58,15 +58,20 @@
     //SLIDER
     $('.slider').each(function(){
       var t = $(this),
-          nItem = t.children().length;
+          nItem = t.children().length,
+					item = t.attr('data-items') ? parseInt(t.attr('data-items')) : 1,
+          navs = t.attr('data-nav') && t.attr('data-nav') == "yes" ? true : false,
+					centers = t.attr('data-center') && t.attr('data-center') == "yes" ? true : false,
+					loops = t.attr('data-loop') && t.attr('data-loop') == "no" ? false : true,
+          dot = t.attr('data-dot') && t.attr('data-dot') == "no" ? false : true;
 
       if (nItem > 1){
         t.addClass('owl-carousel');
         t.owlCarousel({
-          items: 1,
-          loop: true,
-          dots: true,
-          nav: true,
+          items: item,
+          loop: loops,
+          dots: dot,
+          nav: navs,
           margin: 24,
           center: true,
           navText: ["<span class='icon-chevron-left'></span>","<span class='icon-chevron-right'></span>"],

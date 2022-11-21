@@ -1,0 +1,20 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "elearning";
+
+
+block content
+  .elearning
+    .container
+      .page-title.text-center
+        h1 E-Learning Title
+
+      section.elearing-content_video
+        video.videowrap(width='100%' heigth="900" controls='')
+          source(src='http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_60fps_normal.mp4' type='video/mp4')
+          //- source(src='http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_60fps_normal.mp4' type='video/ogg')
+          |   Your browser does not support HTML video.
+
+
+
