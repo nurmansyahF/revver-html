@@ -9,9 +9,9 @@
 body
   // min-height: 180vh
 main
-  padding-top: 90px
+  padding-top: 160px // 40px // 90px
   +mobile()
-    padding-top: 70px
+    padding-top: 32px // 70px
 
 button,
 a
@@ -44,12 +44,28 @@ a
         border-color: lighten($primary, 5%) !important
       &:focus-visible
         box-shadow: none !important
+  &-border
+    padding: 10px 8px
+    border: 1px solid #000
+    border-radius: 8px
+  &-link
+    padding: 16px 24px
+    text-align: center
+    color: $text
+    font-weight: 600
+    text-decoration: none
+    &:hover
+      text-decoration: none
+      color: $primary
   &-block
     display: block
     width: 100%
     // max-width: 512px
   &-small
     padding: 12px 28px
+  &-medium
+    min-width: 270px
+    max-width: 100%
 
 .icon
   width: 80px
@@ -210,7 +226,7 @@ a
         border: 1px solid $border
         border-radius: 8px
 .page-title
-  margin-bottom: 80px
+  margin-bottom: 40px // 80px
   h1
     margin-bottom: 0
 
@@ -280,7 +296,30 @@ a
         a
           color: $primary
 
+// Tabs
+.nav-tabs
+  border-bottom: 0
+  justify-content: center
+  margin-bottom: 80px
+  .nav-item
+    &:not(:last-child)
+      margin-right: 40px
+    .nav-link
+      border: 0
+      color: #000
+      opacity: 0.5
+      padding: 0
+      &.active
+        font-weight: 600
+        color: $primary
+        opacity: 1
+        border-bottom: 1px solid $primary
+      &:hover
+        color: $primary
+  &.tabs-left
+    justify-content: flex-start
 
+// Pagination
 .pagination
   margin-bottom: 40px
   .container
@@ -320,5 +359,73 @@ a
       &:hover
         a
           background: transparent
+
+
+// QTY
+.box-qty
+  display: flex
+  align-items: center
+  span
+    color: #A7A7A7
+    display: inline-block
+    margin-right: 32px
+.form-group.qty
+  display: flex
+  align-items: center
+  margin-bottom: 0
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+  input[type=number]
+    -moz-appearance: textfield
+  .input-number
+    width: 60px
+    height: 60px
+    padding: 16px
+    text-align: center
+    border: 0
+    color: $primary
+    &:focus,
+    &:hover
+      outline: none
+      box-shadow: none
+  .btn-number
+    width: 60px
+    max-height: 60px
+    line-height: 60px
+    text-align: center
+    display: block
+    background: $primary
+    border-radius: 8px
+    text-decoration: none
+    font-weight: 600
+    font-weight: 22px
+    color: #FFF
+    &:disabled,
+    &.disabled
+      background: #DBDBDB
+      color: #000000
+
+// Account Sidebar
+.account
+  &_sidebar
+    padding-right: 108px
+    border-right: 1px solid rgba(0, 0, 0, .5)
+    h4
+      font-size: 36px
+      line-height:  42px
+      margin-bottom: 48px
+    .sidemenu
+      .menu-item
+        display: block
+        color: #000000
+        text-decoration: none
+        &:not(:last-child)
+          margin-bottom: 16px
+        &.active,
+        &:hover
+          color: $primary
+
 
 

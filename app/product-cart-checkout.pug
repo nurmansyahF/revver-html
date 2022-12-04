@@ -1,0 +1,101 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "checkout-product";
+
+
+block content
+  .product-cart
+    .container
+      .product-cart_top
+        h1 Checkout
+        .cart-progress
+          .progress-item.active
+            span.number 1
+            span.text My Cart
+          .progress-item.active
+            span.number 2
+            span.text Checkout
+      .product-cart_content
+        .checkout-form
+          .row
+            .col-md-8
+              form(action="#")
+                .form-group.row
+                  .col-md-6
+                    label First Name
+                    input.form-control(type="text")
+                  .col-md-6
+                    label Last Name
+                    input.form-control(type="text")
+                .form-group.row
+                  .col-md-6
+                    label Address
+                    input.form-control(type="text")
+                  .col-md-6
+                    label Contact
+                    input.form-control(type="text")
+                .form-group.row
+                  .col-md-6
+                    label Country
+                    select.select(title="Select Country")
+                      option(value="0") Country 1
+                      option(value="1") Country 2
+                      option(value="2") Country 3
+                      option(value="3") Country 4
+                      option(value="4") Country 5
+                  .col-md-6
+                    label City
+                    input.form-control(type="text")
+                .form-group.row
+                  .col-md-6
+                    label State
+                    select.select(title="Select State")
+                      option(value="0") State 1
+                      option(value="1") State 2
+                      option(value="2") State 3
+                      option(value="3") State 4
+                      option(value="4") State 5
+                  .col-md-6
+                    label Zip Code
+                    input.form-control(type="text")
+            .col-md-4
+              .checkout-summary
+                h4 Your Order Summary
+                .checkout-summary_list
+                  .item
+                    div 1x
+                    div USB Speaker Portable
+                    div.nominal $100.00
+                  .item
+                    div 1x
+                    div Joystick Pro
+                    div.nominal $100.00
+                  .item
+                    div 1x
+                    div Smartphone 5G
+                    div.nominal $100.00
+                .checkout-summary_total
+                  b Total
+                  span $325.00
+                .checkout-summary_payment
+                  .payment-label
+                    h4 Payment
+                    b Virtual Account
+                  .btn-group.btn-group-toggle(data-toggle='buttons')
+                    label.btn.btn-border.active
+                      input#option1(type='radio' name='options' checked='')
+                      |  BCA
+                    label.btn.btn-border
+                      input#option2(type='radio' name='options')
+                      |  BRI
+                    label.btn.btn-border
+                      input#option3(type='radio' name='options')
+                      |  MANDIRI
+                .checkout-summary_action
+                  a.btn.btn-primary.btn-block(href="#") Checkout
+                  a.btn.btn-link.btn-block(href="#") Back to Cart
+
+
+
+

@@ -1,0 +1,52 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "account";
+  - var activesidemenu = "profile";
+
+
+block content
+  .account
+    .container
+      .account-wrap
+        .row.justify-content-between
+          .col-md-3
+            include templates/account_side_menu.pug
+
+          .col-md-8
+            .account-profile_top
+              .row
+                .col-6
+                  h4 Profile
+                .col-6
+                  .account-profile_photo
+                    img(src="images/photo-profile.png", alt="photo")
+            .account-profile_content
+              form(action="")
+                .form-group.row
+                  .col-md-6
+                    label Full Name
+                    input.form-control(type="text" value="Revver")
+                  .col-md-6
+                    label Username
+                    input.form-control(type="text" value="Revver")
+                .form-group.row
+                  .col-md-6
+                    label Member ID
+                    input.form-control(type="text" value="email@revver.com")
+                  .col-md-6
+                    label Sponsor ID
+                    input.form-control(type="text" value="081234567890")
+                .form-group.row
+                  .col-md-6
+                    label Phone
+                    input.form-control(type="text" value="081234567890")
+                  .col-md-6
+                    label Email
+                    input.form-control(type="email" value="Revver")
+                .form-group.row
+                  .col-md-6
+                    label Secondary Email
+                    input.form-control(type="text" value="email#revver.com")
+                .form-action.text-right
+                  button.btn.btn-primary.btn-medium(type="submit") Save

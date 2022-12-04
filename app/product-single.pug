@@ -1,27 +1,153 @@
 extends templates/layout.pug
 
 block vars
-  - var activepage = "allproducts";
+  - var activepage = "single-products";
 
 
 block content
-  .product-signle
+  .product-single
     .container
-      .row
+      .row.detailTOp
         .col-md-6
-          #bigimgSlider
-            .products__detail-bigimg
-              a(href="images/thumbnail-dummy.jpg" data-lity)
-          .products__detail-thumbnails.slider.owl-carousel(data-items="3" data-loop="no" data-width="fix" data-auto="no" data-nav="no" data-dot="no")
-            .products__detail-thumbnail.active(data-index="0")
-              img(src="images/thumbnail-dummy.jpg", alt="img")
-            .products__detail-thumbnail(data-index="1")
-              img(src="images/thumbnail-dummy.jpg", alt="img")
-            .products__detail-thumbnail(data-index="2")
-              img(src="images/thumbnail-dummy.jpg", alt="img")
-            .products__detail-thumbnail(data-index="3")
-              img(src="images/thumbnail-dummy.jpg", alt="img")
+          .product-single_img
+            .big-img
+              img(src="images/img-dummy-masthead-big.png", alt="img")
+            .product-thumbnail
+              .slider(data-items="3" data-dot="no" data-nav="yes")
+                .item
+                  .thumbnail
+                    img(src="images/img-dummy-masthead-big.png", alt="img")
+                .item
+                  .thumbnail
+                    img(src="images/img-dummy-masthead-big.png", alt="img")
+                .item
+                  .thumbnail
+                    img(src="images/img-dummy-masthead-big.png", alt="img")
+                .item
+                  .thumbnail
+                    img(src="images/img-dummy-masthead-big.png", alt="img")
+                .item
+                  .thumbnail
+                    img(src="images/img-dummy-masthead-big.png", alt="img")
+        .col-md-6
+          .product-details
+            h2 Wireless Microphone
+            .price
+              b $29.00
+            .description
+              strong Description
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            .product-details-action
+              .row
+                .col-6
+                  .box-qty
+                    span Quantity
+                    .form-group.qty.show-sm
+                      a.btn-number.min(href="#" data-type="minus" data-field="quant[7]") -
+                      input.type-hidden(type="hidden" name="size" value="300")
+                      input.form-control.input-number(type="number" placeholder="" name="quant[7]" value="2" min="0" max="20")
+                      a.btn-number.plus(href="#" data-type="plus" data-field="quant[7]") +
+
+                .col-6
+                  .text-right
+                    a.btn.btn-primary(href="#") Add to Cart
 
 
-
+      .product-single_moredetail
+        ul#moredetailTab.nav.nav-tabs.tabs-left(role='tablist')
+          li.nav-item
+            a#moredescription-tab.nav-link.active(data-toggle='tab' href='#moredescription' role='tab' aria-controls='moredetail' aria-selected='true') Description
+          li.nav-item
+            a#howtouse-tab.nav-link(data-toggle='tab' href='#howtouse' role='tab' aria-controls='moredetail' aria-selected='false') How To Use
+          li.nav-item
+            a#benefits-tab.nav-link(data-toggle='tab' href='#benefits' role='tab' aria-controls='moredetail' aria-selected='false') Benefits
+          li.nav-item
+            a#ingredients-tab.nav-link(data-toggle='tab' href='#ingredients' role='tab' aria-controls='moredetail' aria-selected='false') Ingredients
+          li.nav-item
+            a#reviews-tab.nav-link(data-toggle='tab' href='#reviews' role='tab' aria-controls='moredetail' aria-selected='false') Reviews (200)
+        #moredetailTabContent.tab-content
+          #moredescription.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='moredetail-tab')
+            article
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium ab cupiditate culpa animi? Tempora inventore quia cupiditate ipsum expedita esse numquam itaque pariatur et? Consectetur repellendus quibusdam cum optio debitis?
+              p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae dolore placeat vero repellendus delectus porro nulla sequi modi sit nam officiis ducimus adipisci nobis sunt, impedit optio fugiat vel animi.
+              figure
+                img(src="images/thumbnail-dummy.jpg", alt="img")
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias illo eum eligendi, fugiat quod, voluptatem aliquam voluptate iure quasi corrupti consectetur fugit repellat aspernatur dolor beatae itaque cupiditate corporis!
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolor alias eligendi, veritatis quasi saepe nisi labore aliquam nulla sed odio cum a suscipit. Porro ut unde cumque eum cum!
+              ul
+                li List item 1
+                li List item 2
+                li List item 3
+                li List item 4
+                li List item 5
+              p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus culpa, praesentium pariatur sequi quam ad eius sed illo magnam fugit in earum, laboriosam officiis quaerat neque adipisci, delectus dolorem nobis?
+              ol
+                li List number 1
+                li List number 2
+                li List number 3
+                li List number 4
+                li List number 5
+          #howtouse.tab-pane.fade(role='tabpanel' aria-labelledby='moredetail-tab')
+            article
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias illo eum eligendi, fugiat quod, voluptatem aliquam voluptate iure quasi corrupti consectetur fugit repellat aspernatur dolor beatae itaque cupiditate corporis!
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolor alias eligendi, veritatis quasi saepe nisi labore aliquam nulla sed odio cum a suscipit. Porro ut unde cumque eum cum!
+              ul
+                li List item 1
+                li List item 2
+                li List item 3
+                li List item 4
+                li List item 5
+          #benefits.tab-pane.fade(role='tabpanel' aria-labelledby='moredetail-tab')
+             article
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias illo eum eligendi, fugiat quod, voluptatem aliquam voluptate iure quasi corrupti consectetur fugit repellat aspernatur dolor beatae itaque cupiditate corporis!
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolor alias eligendi, veritatis quasi saepe nisi labore aliquam nulla sed odio cum a suscipit. Porro ut unde cumque eum cum!
+              ol
+                li List item 1
+                li List item 2
+                li List item 3
+                li List item 4
+                li List item 5
+          #ingredients.tab-pane.fade(role='tabpanel' aria-labelledby='moredetail-tab')
+            article
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam alias illo eum eligendi, fugiat quod, voluptatem aliquam voluptate iure quasi corrupti consectetur fugit repellat aspernatur dolor beatae itaque cupiditate corporis!
+              ul
+                li List item 1
+                li List item 2
+                li List item 3
+                li List item 4
+                li List item 5
+          #reviews.tab-pane.fade(role='tabpanel' aria-labelledby='moredetail-tab')
+            .list-review
+              .review-item
+                .review-item_top
+                  .photo
+                    img(src="images/thumbnail-dummy.jpg", alt="img")
+                  .name
+                    b Vanille
+                .review-item_content
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              .review-item
+                .review-item_top
+                  .photo
+                    img(src="images/thumbnail-dummy.jpg", alt="img")
+                  .name
+                    b Vanille
+                .review-item_content
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              .review-item
+                .review-item_top
+                  .photo
+                    img(src="images/thumbnail-dummy.jpg", alt="img")
+                  .name
+                    b Vanille
+                .review-item_content
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              .review-item
+                .review-item_top
+                  .photo
+                    img(src="images/thumbnail-dummy.jpg", alt="img")
+                  .name
+                    b Vanille
+                .review-item_content
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 

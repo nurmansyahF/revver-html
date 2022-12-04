@@ -1,0 +1,25 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "account";
+  - var activesidemenu = "privacy-policy";
+
+
+block content
+  .account
+    .container
+      .account-wrap
+        .row.justify-content-between
+          .col-md-3
+            include templates/account_side_menu.pug
+
+          .col-md-8
+            .account-profile_top
+              .row
+                .col-6
+                  h4 Privacy Policy
+                .col-6
+            .account-profile_content
+              .privacy-policy_content
+                article
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.

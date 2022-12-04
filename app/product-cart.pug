@@ -1,0 +1,22 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "cart-product";
+
+
+block content
+  .product-cart
+    .container
+      .product-cart_top
+        h1 My Cart
+        .cart-progress
+          .progress-item.active
+            span.number 1
+            span.text My Cart
+          .progress-item
+            span.number 2
+            span.text Checkout
+
+
+
+

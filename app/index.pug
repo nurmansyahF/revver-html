@@ -23,38 +23,77 @@ body
           img(src="images/logo-revver.png")
       .card-body
         ul.card-list
-          li.card-item
-            a(href="login.html" target="_blank")
-              span Login
-          li.card-item
-            a(href="register.html" target="_blank")
-              span Register
+          li.card-item.has-child
+            a(href="#" target="_blank")
+              span Auth
+            ul.card-sub-list
+              li.card-item
+                a(href="login.html" target="_blank")
+                  span Login
+              li.card-item
+                a(href="register.html" target="_blank")
+                  span Register
+          li.card-item.has-child
+            a(href="#")
+              span Account
+            ul.card-sub-list
+              li.card-item
+                a(href="account.html" target="_blank")
+                  span Account - Profile
+              li.card-item
+                a(href="account-change-password.html" target="_blank")
+                  span Account - Change Password
+              li.card-item
+                a(href="account.html" target="_blank")
+                  span Account - Privacy Policy
           li.card-item
             a(href="home.html" target="_blank")
               span Home
-          li.card-item
-            a(href="all-product.html" target="_blank")
-              span All Product
-          li.card-item
-            a(href="news-update.html" target="_blank")
-              span News Update
-          li.card-item
-            a(href="news-update-single.html" target="_blank")
-              span News Update - Single
-          li.card-item
-            a(href="e-learning.html" target="_blank")
+          li.card-item.has-child
+            a(href="#")
+              span Product
+            ul.card-sub-list
+              li.card-item
+                a(href="all-product.html" target="_blank")
+                  span All Product
+              li.card-item
+                a(href="product-single.html" target="_blank")
+                  span Single Product
+              li.card-item
+                a(href="product-cart.html" target="_blank")
+                  span Cart
+          li.card-item.has-child
+            a(href="#")
+              span News
+            ul.card-sub-list
+              li.card-item
+                a(href="news-update.html" target="_blank")
+                  span News Update
+              li.card-item
+                a(href="news-update-single.html" target="_blank")
+                  span News Update - Single
+          li.card-item.has-child
+            a(href="#")
               span E-Learning
-          li.card-item
-            a(href="e-learning-pdf.html" target="_blank")
-              span E-Learning PDF
-          li.card-item
-            a(href="e-learning-pdf.html" target="_blank")
-              span E-Learning Video
-          li.card-item
-            a(href="plan.html" target="_blank")
+            ul.card-sub-list
+              li.card-item
+                a(href="e-learning.html" target="_blank")
+                  span E-Learning
+              li.card-item
+                a(href="e-learning-pdf.html" target="_blank")
+                  span E-Learning PDF
+              li.card-item
+                a(href="e-learning-pdf.html" target="_blank")
+                  span E-Learning Video
+          li.card-item.has-child
+            a(href="#")
               span Plan
+            ul.card-sub-list
+              li.card-item
+                a(href="plan.html" target="_blank")
+                  span Plan
           li.card-item
-            a(href="plan.html" target="_blank")
+            a(href="ehealth.html" target="_blank")
               span E-Health
           li.card-item
             a(href="notif-inbox.html" target="_blank")
