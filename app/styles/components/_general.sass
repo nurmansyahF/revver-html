@@ -66,6 +66,8 @@ a
   &-medium
     min-width: 270px
     max-width: 100%
+  &-xsmall
+    padding: 2px 24px
 
 .icon
   width: 80px
@@ -403,9 +405,16 @@ a
     font-weight: 22px
     color: #FFF
     &:disabled,
-    &.disabled
+    &.disabled,
+    &[disabled]
       background: #DBDBDB
       color: #000000
+  &.small
+    .input-number,
+    .btn-number
+      width: 48px
+      line-height: 46px
+      max-height: 48px
 
 // Account Sidebar
 .account

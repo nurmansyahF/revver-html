@@ -35,95 +35,55 @@
           </div>
         </header>
         <main>
-          <div class="allproducts">
+          <div class="product-cart invoice">
             <div class="container">
-              <div class="page-title text-center">
-                <h1>Products</h1>
+              <div class="product-cart_top">
+                <h1>Invoice</h1>
+              </div>
+              <div class="invoice-wrap">
+                <div class="invoice-header">
+                  <div class="invoice-logo"><img src="images/logo-revver.png" alt="logo"/></div>
+                  <div class="invoice-address">
+                    <address>4945 Forest Avenue, New York <br>10004, United States<br> 646-888-6885 <br>email@email.com <br>www.website.com</address>
+                  </div>
+                </div>
+                <div class="invoice-detail">
+                  <div class="row">
+                    <div class="col-md-2"><span>Billed to,</span><b>Don Joe</b></div>
+                    <div class="col-md-3"><span>Invoice Number</span><b>#000-01</b></div>
+                    <div class="col-md-5"><span>Invoice Date</span><b>11 Oktober 2022</b></div>
+                    <div class="col-md-2"><span>Payment Status</span><b>Pending</b></div>
+                  </div>
+                </div>
+                <div class="invoice-table">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="w-50" scope="col">Item Description</th>
+                        <th class="w-20" scope="col">Qty</th>
+                        <th class="w-20" scope="col">Rate</th>
+                        <th class="w-10" scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>USB Speaker Portable</td>
+                        <td>1</td>
+                        <td>$100</td>
+                        <td>$100</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="invoice-payment">
+                  <div class="detail"><span>Payment Detail:</span>
+                    <h4>BCA Virtual Account</h4>
+                    <h5 class="norek"><span>123-456-789-10</span><a class="btn btn-primary btn-xsmall" href="#">Copy</a></h5>
+                  </div>
+                  <div class="invoice-grandtotal"><span>Total</span><b>$100</b></div>
+                </div>
               </div>
             </div>
-            <section class="innerMenu bordered">
-              <div class="container">
-                <div class="row">
-                  <div class="col-2"><a class="innerMenu-item" href="#">
-                      <div class="icon"><i class="fa-solid fa-earth-americas"></i></div><span>All Categories</span></a></div>
-                  <div class="col-2"><a class="innerMenu-item" href="#">
-                      <div class="icon"><i class="fa-solid fa-briefcase-medical"></i></div><span>Health</span></a></div>
-                  <div class="col-2"><a class="innerMenu-item" href="#">
-                      <div class="icon"><i class="fa-solid fa-laptop"></i></div><span>Electronic</span></a></div>
-                </div>
-              </div>
-            </section>
-            <section class="card-products">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="pagination">
-              <div class="container">
-                <div class="pagination-wrap">
-                  <div class="pagination-item prev"><a href="#"><img src="images/ic-chevron-left-white.png" alt="icon"/></a></div>
-                  <div class="pagination-item active"><a href="#"><span>1</span></a></div>
-                  <div class="pagination-item"><a href="#"><span>2</span></a></div>
-                  <div class="pagination-item"><a href="#"><span>3</span></a></div>
-                  <div class="pagination-item next"><a href="#"><img src="images/ic-chevron-right-white.png" alt="icon"/></a></div>
-                </div>
-              </div>
-            </section>
           </div>
         </main>
         <footer class="footer">

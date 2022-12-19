@@ -1,0 +1,56 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "ehealth";
+
+
+block content
+  .ehealth
+    .container
+      section.ehealth-title
+        h1 E-Health
+      section.innerMenu.bordered
+        .container
+          .row
+            .col-2
+              a.innerMenu-item(href="#")
+                .icon
+                  i.fa-solid.fa-earth-americas
+                span All Categories
+            .col-2
+              a.innerMenu-item(href="#")
+                .icon
+                  i.fa-solid.fa-briefcase-medical
+                span Health
+            .col-2
+              a.innerMenu-item(href="#")
+                .icon
+                  i.fa-solid.fa-laptop
+                span Electronic
+      section.ehealth-list
+        table.table.table-striped.table-ehealthlist.dataTable
+          thead
+            tr
+              th &nbsp;
+          tbody
+            tr
+              td
+                a(href="ehealth-detail.html")
+                  | Anemia
+            tr
+              td
+                a(href="ehealth-detail.html")
+                  | Asma
+            tr
+              td
+                a(href="ehealth-detail.html")
+                  | Campak
+            tr
+              td
+                a(href="ehealth-detail.html")
+                  | Diare
+            tr
+              td
+                a(href="ehealth-detail.html")
+                  | Flue
+

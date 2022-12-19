@@ -1,0 +1,64 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "invoice-product";
+
+
+block content
+  .product-cart.invoice
+    .container
+      .product-cart_top
+        h1 Invoice
+      .invoice-wrap
+        .invoice-header
+          .invoice-logo
+            img(src="images/logo-revver.png", alt="logo")
+          .invoice-address
+            address 4945 Forest Avenue, New York <br>10004, United States<br> 646-888-6885 <br>email@email.com <br>www.website.com
+        .invoice-detail
+          .row
+            .col-md-2
+              span Billed to,
+              b Don Joe
+            .col-md-3
+              span Invoice Number
+              b #000-01
+            .col-md-5
+              span Invoice Date
+              b 11 Oktober 2022
+            .col-md-2
+              span Payment Status
+              b Pending
+        .invoice-table
+          table.table
+            thead
+              tr
+                th.w-50(scope='col') Item Description
+                th.w-20(scope='col') Qty
+                th.w-20(scope='col') Rate
+                th.w-10(scope='col') Amount
+            tbody
+              tr
+                td USB Speaker Portable
+                td 1
+                td $100
+                td $100
+
+
+        .invoice-payment
+          .detail
+            span Payment Detail:
+            h4 BCA Virtual Account
+            h5.norek
+              span 123-456-789-10
+              a.btn.btn-primary.btn-xsmall(href="#") Copy
+
+          .invoice-grandtotal
+            span Total
+            b $100
+
+
+
+
+
+

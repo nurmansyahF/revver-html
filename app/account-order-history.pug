@@ -1,0 +1,49 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "account";
+  - var activesidemenu = "oder-history";
+
+
+block content
+  .account
+    .container
+      .account-wrap
+        .row.justify-content-between
+          .col-md-3
+            include templates/account_side_menu.pug
+
+          .col-md-8
+            .account-profile_top
+              .row
+                .col-6
+                  h4 Order History
+                .col-6
+            .account-profile_content
+              table.table.table-striped.dataTable
+                thead
+                  tr
+                    th Order ID
+                    th Total Item
+                    th Total Price
+                    th Date
+                    th Status
+                tbody
+                  tr
+                    td 1234567890
+                    td 1.00
+                    td 1000000
+                    td 2022-10-23 &nbsp; 15:37:56
+                    td Pending
+                  tr
+                    td 1234567891
+                    td 2.00
+                    td 1000000
+                    td 2022-11-23 &nbsp; 15:37:56
+                    td Pending
+                  tr
+                    td 1234567893
+                    td 3.00
+                    td 1000000
+                    td 2022-12-23 &nbsp; 15:37:56
+                    td Pending

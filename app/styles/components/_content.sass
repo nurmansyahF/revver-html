@@ -327,6 +327,7 @@
             top: calc(50% - 1px)
             right: calc(100% + 64px)
 
+.cart,
 .checkout
   &-summary
     padding: 32px 24px
@@ -383,5 +384,447 @@
             background: $text
             color: #FFF
 
+.cart
+  &-summary
+    border-color: #F0A500
+    color: #F0A500
+    h4
+      text-align: left
+    &_total
+      padding-bottom: 0
+      border-bottom: 0
+      b
+        font-size: 18px
+        line-height: 27px
+        color: #A7A7A7
+        font-weight: 500
+      span
+        font-size: 24px
+        line-height: 36px
+        font-weight: 500
+    .btn-link
+      color: $primary
+  &-list
+    &_wrap
+    &_item
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      padding: 42px 0
+      border-top: 1px solid $primary
+      &:last-child
+        border-bottom: 1px solid $primary
+      .remove
+        width: 24px
+        height: 24px
+        background: url(../images/ic-close.svg) no-repeat center
+    &_action
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      padding-bottom: 36px
+
+      & > span
+        padding-left: 60px
+        color: #A7A7A7
+    .box-product
+      width: calc(100% - 55px)
+      display: flex
+      flex-wrap: wrap
+      padding-left: 60px
+      .thumbnail
+        width: 180px
+        padding: 11.35% 0
+        position: relative
+        overflow: hidden
+        img
+          width: 100%
+          height: 100%
+          position: absolute
+          top: 0
+          left: 0
+          object-fit: cover
+          object-position: center
+      .text
+        padding-left: 50px
+        font-size: 24px
+        line-height: 36px
+        display: flex
+        flex-direction: column
+        .name
+          margin-bottom: 16px
+        .price
+          color: $primary
+          font-weight: 500
+        .qty
+          margin-top: auto
 
 
+
+.invoice
+  &-wrap
+    padding: 80px 108px
+    background: #D9D9D9
+    border-radius: 20px
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 116px
+  &-logo
+    img
+      max-height: 108px
+  &-address
+    text-align: right
+    font-weight: 600
+  &-detail
+    margin-bottom: 40px
+    span
+      display: block
+    b
+      font-family: 'Montserrat', sans-serif
+      font-size:  36px
+      line-height: 43px
+      font-weight: 600
+  &-table
+    .table
+      border-bottom: 1px solid #BEB3C4
+      td,
+      th
+        border-top: 1px solid #BEB3C4
+        &:first-child
+          padding-left: 72px
+        &:last-child
+          // padding-right: 72px
+      thead
+        th
+          border-bottom: 0
+  &-payment
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .detail
+      flex: 0 0 50%
+      max-width: 50%
+      span
+        display: block
+      h4
+        font-size: 36px
+        line-height: 43px
+        margin-bottom: 0
+      .norek
+        display: flex
+        span
+          font-size: 24px
+          line-height: 29px
+        .btn
+          margin-left: 20px
+  &-grandtotal
+    flex: 0 0 50%
+    max-width: 50%
+    padding: 24px 32px
+    background: rgba(207, 117, 0, .6)
+    color: #FFF
+    display: flex
+    span,
+    b
+      font-family: 'Montserrat', sans-serif
+      font-size: 36px
+      line-height: 43px
+      font-weight: 700
+    span
+      flex: 0 0 65%
+    b
+      flex: 0 0 35%
+
+
+.ehealth
+  &-detail
+  &-userDetail
+    padding-bottom: 80px
+    .userDetail
+      &-item
+        display: flex
+        align-items: center
+        width: 100%
+        height: 100%
+        position: relative
+        &:after
+          content: ""
+          width: 3px
+          height: 100px
+          background: #000000
+          position: absolute
+          top: 24px
+          right: -12px
+        .photo
+          width: 150px
+          height: 150px
+          border-radius: 100px
+          overflow: hidden
+          margin-right: 40px
+          img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        .text
+          h3
+            margin-bottom: 0
+          &.center
+            padding-left: 30px
+          &.text-center
+            h3
+              text-align: center
+    .col-md-4
+      &:last-child
+        .userDetail-item
+          display: flex
+          justify-content: space-between
+          align-items: center
+          &:after
+            display: none
+  &-detailDesc
+    padding-bottom: 80px
+
+// Goals
+.goals
+  padding-bottom: 200px
+  &-charts
+    .charts-title
+      h3,
+      p
+        margin-bottom: 0
+      .btn-link
+        padding: 0
+        color: #F0A500
+  &-progress
+    max-width: 90%
+  &-desc
+    margin-bottom: 40px
+    p:not(:last-child)
+      margin-bottom: 20px
+  &-steps
+    .steps-item
+      &:not(:last-child)
+        margin-bottom: 40px
+      b
+        font-size: 24px
+        line-height: 30px
+        font-weight: 600
+      span
+        padding-left: 20px
+      .or
+        margin-top: 10px
+        width: 100%
+        height: 10px
+        background: #DBDBDB
+        position: relative
+        span
+          position: absolute
+          top: -15px
+          right: -15px
+          padding: 10px
+          border-radius: 100px
+          background: #DBDBDB
+          color: #FFF
+          font-size: 18px
+          line-height: 1.2em
+      &.gold
+        .or
+          background: #F0A500
+          span
+            background: #F0A500
+      &.dark-gray
+        .or
+          background: #A7A7A7
+          span
+            background: #A7A7A7
+      &.brown
+        .or
+          background: #CF7500
+          span
+            background: #CF7500
+      &.blue
+        .or
+          background: #2D9CDB
+          span
+            background: #2D9CDB
+  &-history
+    padding: 30px
+    border: 1px solid $border
+    border-radius: 32px
+    height: 100%
+    .history
+      &-title
+        position: relative
+        padding-bottom: 40px
+        margin-bottom: 40px
+        border-bottom: 1px solid $border
+        h5
+          margin-bottom: 0
+        .btn-primary
+          position: absolute
+          top: -4px
+          right: 0
+      &-item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &:not(:last-child)
+          margin-bottom: 20px
+        .icon
+          width: 30px
+          height: 30px
+          display: inline-block
+          vertical-align: middle
+          margin-right: 20px
+          img
+            width: 100%
+            height: 100%
+            object-fit: contain
+        .left
+          span
+            display: inline-block
+            vertical-align: middle
+            font-weight: 700
+            font-size: 24px
+            line-height: 30px
+
+  &-action
+    padding-top: 24px
+
+// Chart
+.donut-chart
+	position: relative
+	width: 200px
+	height: 200px
+	margin: 0 auto 2rem
+	border-radius: 100%
+p
+	&.center
+		background: #394264
+		position: absolute
+		text-align: center
+		font-size: 28px
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 130px
+		height: 130px
+		margin: auto
+		border-radius: 50%
+		line-height: 35px
+		padding: 15% 0 0
+.portion-block
+	border-radius: 50%
+	clip: rect(0px, 200px, 200px, 100px)
+	height: 100%
+	position: absolute
+	width: 100%
+.circle
+	border-radius: 50%
+	clip: rect(0px, 100px, 200px, 0px)
+	height: 100%
+	position: absolute
+	width: 100%
+	font-family: monospace
+	font-size: 1.5rem
+#part1
+	transform: rotate(0deg)
+	.circle
+		background-color: #E64C65
+		animation: first 1s 1 forwards
+#part2
+	transform: rotate(100deg)
+	.circle
+		background-color: #11A8AB
+		animation: second 1s 1 forwards 1s
+#part3
+	transform: rotate(250deg)
+	.circle
+		background-color: #4FC4F6
+		animation: third 0.5s 1 forwards 2s
+
+// Animation Chart
+@keyframes
+	first
+		from
+      transform: rotate(0deg)
+  to
+    transform: rotate(100deg)
+    transform: rotate(150deg)
+    transform: rotate(111deg)
+@keyframes
+  second
+    from
+      transform: rotate(0deg)
+  third
+    from
+      transform: rotate(0deg)
+
+
+// Leads
+.leads
+  padding-bottom: 80px
+  &-overview
+    padding-bottom: 80px
+    .progress
+      border-radius: 10px
+      height: 10px
+      margin-bottom: 16px
+      &-bar
+        background-color: #A7A7A7
+        &.cold
+          background-color: #2D9CDB
+        &.warm
+          background-color: #F0A500
+        &.hot
+          background-color: #CF7500
+        &.converted
+          background-color: #8FFF00
+        &.underaverage
+          background-color: #A7A7A7
+    .description
+      display: flex
+      align-items: center
+      margin-left: -10px
+      margin-right: -10px
+      &-item
+        padding-left: 10px
+        padding-right: 10px
+        display: flex
+        align-items: center
+        .color
+          width: 20px
+          height: 20px
+          background: #A7A7A7
+          border-radius: 50px
+          margin-right: 10px
+
+  &-table
+    .photo
+      width: 80px
+      height: 80px
+      overflow: hidden
+      border-radius: 100px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+  &-add
+    .photo-profile
+      .custom-file-input
+        width: 0
+        height: 0
+        opacity: 0
+      .preview
+        width: 140px
+        height: 140px
+        display: block
+        &:hover
+          cursor: pointer
+    .btn-primary
+      min-width: 250px

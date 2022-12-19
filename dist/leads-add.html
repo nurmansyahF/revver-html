@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Revver Template</title>
+    <meta name="description" content=""/>
+    <meta name="theme-color" content="#D1700C"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><script src="https://kit.fontawesome.com/19382de722.js" crossorigin="anonymous"></script>
+    <link src="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="styles/plugins.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="web-wrapper" id="page">
+        <header class="header" id="header">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-md-6">
+                <div class="header-logo"><a href="home.html"><img src="images/logo-revver.png" alt="logo"/></a></div>
+              </div>
+              <div class="col-md-6">
+                <div class="header-right">
+                  <nav class="header-menu"><a class="header-menu_item" href="event.html">Event</a><a class="header-menu_item" href="event.html">Leads</a></nav>
+                  <div class="header-icon"><a class="icon" href="#"><i class="fa-solid fa-cart-shopping"></i></a><a class="icon" href="#"><i class="fa-solid fa-user"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="leads leads-add">
+            <div class="container">
+              <div class="leads-add">
+                <form class="leads-form">
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <div class="photo-profile form-group">
+                        <input class="custom-file-input" id="photo" type="file"/>
+                        <label class="preview" for="photo"><img src="images/photo-profile.png" alt="photo"/></label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 text-right">
+                      <button class="btn btn-primary" type="submit">Save</button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Full Name</label>
+                        <input class="form-control" type="text" placeholder="Revver"/>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Phone Number</label>
+                        <input class="form-control" type="text" placeholder="081234567890"/>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input class="form-control" type="email" placeholder="email@email.com"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Lead Status</label>
+                        <select class="select" title="Select Lead">
+                          <option value="0" selected="selected">Cold</option>
+                          <option value="1">Warm</option>
+                          <option value="2">Hot</option>
+                          <option value="3">Converted</option>
+                          <option value="4">Potential</option>
+                          <option value="4">Avarage</option>
+                          <option value="4">Under Avarage</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Financial Score</label>
+                            <select class="select" title="Score">
+                              <option value="0" selected="selected">1</option>
+                              <option value="1">2</option>
+                              <option value="2">3</option>
+                              <option value="3">4</option>
+                              <option value="4">5</option>
+                              <option value="4">6</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Ambition Score</label>
+                            <select class="select" title="Score">
+                              <option value="0" selected="selected">1</option>
+                              <option value="1">2</option>
+                              <option value="2">3</option>
+                              <option value="3">4</option>
+                              <option value="4">5</option>
+                              <option value="4">6</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Supel Score</label>
+                            <select class="select" title="Score">
+                              <option value="0" selected="selected">1</option>
+                              <option value="1">2</option>
+                              <option value="2">3</option>
+                              <option value="3">4</option>
+                              <option value="4">5</option>
+                              <option value="4">6</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Teachable Score</label>
+                            <select class="select" title="Score">
+                              <option value="0" selected="selected">1</option>
+                              <option value="1">2</option>
+                              <option value="2">3</option>
+                              <option value="3">4</option>
+                              <option value="4">5</option>
+                              <option value="4">6</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label>Medical Record</label>
+                        <select class="select" title="Score">
+                          <option value="0" selected="selected">Flu</option>
+                          <option value="1">Pilek</option>
+                          <option value="2">Encok</option>
+                          <option value="3">Covid</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label>Height (Cm)</label>
+                        <input class="form-control" type="text" placeholder="eg: 160"/>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label>Weight (Kg)</label>
+                        <input class="form-control" type="text" placeholder="eg: 60"/>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label>Age</label>
+                        <input class="form-control" type="text" placeholder="eg: 20"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Province</label>
+                        <input class="form-control" type="text" placeholder="Jawa Timur"/>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>City</label>
+                        <input class="form-control" type="text" placeholder="Surabaya"/>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Address</label>
+                        <input class="form-control" type="text" placeholder="Jl. Arjuno"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Note</label>
+                        <textarea class="form-control" placeholder="Enter a note for this lead" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer-top">
+            <div class="container">
+              <div class="row justify-content-between">
+                <div class="col-lg-5 col-md-6">
+                  <div class="footer-top_left">
+                    <div class="footer-logo"><a href="home.html"><img src="images/logo-secondary.png" alt="logo"/></a></div>
+                    <div class="footer-desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                    <div class="footer-socmed"><a class="ic-socmed" href="#" target="_blank"><i class="fa-brands fa-square-instagram"></i></a><a class="ic-socmed" href="#" target="_blank"><i class="fa-brands fa-square-twitter"></i></a><a class="ic-socmed" href="#" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></div>
+                  </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                  <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <ul>
+                      <li><a href="tel:+1234567890">+1234567890</a>
+                        <div class="ic-contact"><i class="fa-light fa-phone"></i></div>
+                      </li>
+                      <li><a href="mailto:support@revver.com">support@revver.com</a>
+                        <div class="ic-contact"><i class="fa-regular fa-envelope"></i></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row justify-content-between">
+                <div class="col-lg-4">
+                  <div class="copyright"><span>Copyright © 2022 Revver. All Right Reseved</span></div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="payment"><a class="icon" href="#"><img src="images/ic-master-card.svg" alt="icon"/></a><a class="icon" href="#"><img src="images/ic-visa.svg" alt="icon"/></a><a class="icon" href="#"><img src="images/ic-paypal.svg" alt="icon"/></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script src="plugins/bootstrap/popper.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/hbaloadimages/hbaloadimages.min.js"></script>
+    <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

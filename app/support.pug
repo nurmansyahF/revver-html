@@ -1,0 +1,87 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "goals";
+
+
+block content
+  .goals
+    .container
+      .page-title.text-center
+        h1 Goals
+      section.goals-content
+        .row
+          .col-md-8
+            .goals-left
+              .row
+                .col-md-6
+                  .goals-charts
+                    .donut-chart-block.block
+                      .donut-chart
+                        #part1.portion-block
+                          .circle
+                        #part2.portion-block
+                          .circle
+                        #part3.portion-block
+                          .circle
+                        p.center
+                    .charts-title.text-center
+                      h3 Your Dream
+                      p Deadline in 2 Month
+                      a.btn.btn-link(href="#") Change Your Dream
+                .col-md-6
+                  .goals-progress
+                    .goals-desc
+                      p Target jaringan: 2800 kanan | 2800 kiri
+                      p Perhitungan dibawah hanya diambil dari bonus referral (Sponsor):
+                    .goals-steps
+                      .steps-item
+                        b 1000 Platinum
+                        span per bulan
+                        .or
+                          span or
+                      .steps-item.gold
+                        b 1000 Gold
+                        span per bulan
+                        .or
+                          span or
+                      .steps-item.dark-gray
+                        b 1000 Silver
+                        span per bulan
+                        .or
+                          span or
+                      .steps-item.brown
+                        b 1000 Bronze
+                        span per bulan
+                        .or
+                          span or
+                      .steps-item.blue
+                        b 1000 Userpack
+                        span per bulan
+                        .or
+                          span or
+          .col-md-4
+            .goals-history
+              .history-title
+                h5 Progress History
+                a.btn.btn-primary.btn-xsmall(href="#") Record Progress
+              .history-item
+                .left
+                  .icon
+                    img(src="images/ic-bulleyese.svg", alt="icon")
+                  span 1 Gold
+                .right
+                  span 17-10-2022
+              .history-item
+                .left
+                  .icon
+                    img(src="images/ic-bulleyese.svg", alt="icon")
+                  span 1 Gold
+                .right
+                  span 17-10-2022
+            .goals-action.text-right
+              a.btn.btn-primary.btn-xsmall(href="#") Reset Progress
+
+
+
+

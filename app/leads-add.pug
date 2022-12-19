@@ -1,0 +1,133 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "leads";
+
+
+block content
+  .leads.leads-add
+    .container
+      .leads-add
+        form.leads-form
+          .row.align-items-center
+            .col-md-6
+              .photo-profile.form-group
+                input.custom-file-input(id="photo" type="file")
+                label.preview(for="photo")
+                  img(src="images/photo-profile.png", alt="photo")
+            .col-md-6.text-right
+              button.btn.btn-primary(type="submit") Save
+          .row
+            .col-md-4
+              .form-group
+                label Full Name
+                input.form-control(type="text" placeholder="Revver")
+            .col-md-4
+              .form-group
+                label Phone Number
+                input.form-control(type="text" placeholder="081234567890")
+            .col-md-4
+              .form-group
+                label Email
+                input.form-control(type="email" placeholder="email@email.com")
+          .row
+            .col-md-4
+              .form-group
+                label Lead Status
+                select.select(title="Select Lead")
+                  option(value="0" selected) Cold
+                  option(value="1") Warm
+                  option(value="2") Hot
+                  option(value="3") Converted
+                  option(value="4") Potential
+                  option(value="4") Avarage
+                  option(value="4") Under Avarage
+            .col-md-4
+              .row
+                .col-md-6
+                  .form-group
+                    label Financial Score
+                    select.select(title="Score")
+                      option(value="0" selected) 1
+                      option(value="1") 2
+                      option(value="2") 3
+                      option(value="3") 4
+                      option(value="4") 5
+                      option(value="4") 6
+                .col-md-6
+                  .form-group
+                    label Ambition Score
+                    select.select(title="Score")
+                      option(value="0" selected) 1
+                      option(value="1") 2
+                      option(value="2") 3
+                      option(value="3") 4
+                      option(value="4") 5
+                      option(value="4") 6
+            .col-md-4
+              .row
+                .col-md-6
+                  .form-group
+                    label Supel Score
+                    select.select(title="Score")
+                      option(value="0" selected) 1
+                      option(value="1") 2
+                      option(value="2") 3
+                      option(value="3") 4
+                      option(value="4") 5
+                      option(value="4") 6
+                .col-md-6
+                  .form-group
+                    label Teachable Score
+                    select.select(title="Score")
+                      option(value="0" selected) 1
+                      option(value="1") 2
+                      option(value="2") 3
+                      option(value="3") 4
+                      option(value="4") 5
+                      option(value="4") 6
+          .row
+            .col-md-3
+              .form-group
+                label Medical Record
+                select.select(title="Score")
+                  option(value="0" selected) Flu
+                  option(value="1") Pilek
+                  option(value="2") Encok
+                  option(value="3") Covid
+            .col-md-3
+              .form-group
+                label Height (Cm)
+                input.form-control(type="text" placeholder="eg: 160")
+            .col-md-3
+              .form-group
+                label Weight (Kg)
+                input.form-control(type="text" placeholder="eg: 60")
+            .col-md-3
+              .form-group
+                label Age
+                input.form-control(type="text" placeholder="eg: 20")
+          .row
+            .col-md-4
+              .form-group
+                label Province
+                input.form-control(type="text" placeholder="Jawa Timur")
+            .col-md-4
+              .form-group
+                label City
+                input.form-control(type="text" placeholder="Surabaya")
+            .col-md-4
+              .form-group
+                label Address
+                input.form-control(type="text" placeholder="Jl. Arjuno")
+          .row
+            .col-md-12
+              .form-group
+                label Note
+                textarea.form-control( placeholder="Enter a note for this lead" rows="4")
+
+
+
+
+
+

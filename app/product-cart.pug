@@ -16,7 +16,76 @@ block content
           .progress-item
             span.number 2
             span.text Checkout
+      .product-cart_content
+        .product-cart_wrap
+          .row.justify-content-between
+            .col-md-7
+              .cart-list
+                .cart-list_action
+                  .checkbox.custom-control.custom-checkbox
+                    input.custom-control-input(type="checkbox" id="checkAll")
+                    label.custom-control-label(for="checkAll")
+                  span Select All
+                .cart-list_wrap
+                  .cart-list_item
+                    .checkbox.custom-control.custom-checkbox
+                      input.custom-control-input(type="checkbox" id="check1")
+                      label.custom-control-label(for="check1")
+                    .box-product
+                      .thumbnail
+                        img(src="images/thumbnail-dummy.jpg", alt="img")
+                      .text
+                        .name USB Speaker Portable
+                        .price $100.99
+                        .form-group.qty.small
+                          a.btn-number.min(href="#" data-type="minus" data-field="quant[1]") -
+                          input.type-hidden(type="hidden" name="size" value="300")
+                          input.form-control.input-number(type="number" placeholder="" name="quant[1]" value="2" min="0" max="20")
+                          a.btn-number.plus(href="#" data-type="plus" data-field="quant[1]") +
+                    a.remove(href="#")
+                  .cart-list_item
+                    .checkbox.custom-control.custom-checkbox
+                      input.custom-control-input(type="checkbox" id="check2")
+                      label.custom-control-label(for="check2")
+                    .box-product
+                      .thumbnail
+                        img(src="images/thumbnail-dummy.jpg", alt="img")
+                      .text
+                        .name USB Speaker Portable
+                        .price $100.99
+                        .form-group.qty.small
+                          a.btn-number.min(href="#" data-type="minus" data-field="quant[2]") -
+                          input.type-hidden(type="hidden" name="size" value="300")
+                          input.form-control.input-number(type="number" placeholder="" name="quant[2]" value="2" min="0" max="20")
+                          a.btn-number.plus(href="#" data-type="plus" data-field="quant[2]") +
+                    a.remove(href="#")
+                  .cart-list_item
+                    .checkbox.custom-control.custom-checkbox
+                      input.custom-control-input(type="checkbox" id="check3")
+                      label.custom-control-label(for="check3")
+                    .box-product
+                      .thumbnail
+                        img(src="images/thumbnail-dummy.jpg", alt="img")
+                      .text
+                        .name USB Speaker Portable
+                        .price $100.99
+                        .form-group.qty.small
+                          a.btn-number.min(href="#" data-type="minus" data-field="quant[3]") -
+                          input.type-hidden(type="hidden" name="size" value="300")
+                          input.form-control.input-number(type="number" placeholder="" name="quant[3]" value="2" min="0" max="20")
+                          a.btn-number.plus(href="#" data-type="plus" data-field="quant[3") +
+                    a.remove(href="#")
 
+
+            .col-md-4
+              .cart-summary
+                h4 Summary
+                .cart-summary_total
+                  b Total
+                  span $202.00
+                .cart-summary_action
+                  a.btn.btn-primary.btn-block(href="#") Checkout
+                  a.btn.btn-link.btn-block(href="#") Continue Shopping
 
 
 

@@ -35,95 +35,65 @@
           </div>
         </header>
         <main>
-          <div class="allproducts">
+          <div class="account">
             <div class="container">
-              <div class="page-title text-center">
-                <h1>Products</h1>
+              <div class="account-wrap">
+                <div class="row justify-content-between">
+                  <div class="col-md-3">
+                    <div class="account_sidebar">
+                      <h4>Account</h4>
+                      <nav class="sidemenu"><a class="menu-item active" href="account.html">Profile</a><a class="menu-item" href="account-change-password.html">Change Password</a><a class="menu-item" href="account-order-history.html">Order History</a><a class="menu-item" href="account-privacy-policy.html">Privacy Policy</a><a class="menu-item" href="#">Refund Policy</a><a class="menu-item" href="#">About Apps</a><a class="menu-item" href="login.html">Logout</a></nav>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="account-profile_top">
+                      <div class="row">
+                        <div class="col-6">
+                          <h4>Order History</h4>
+                        </div>
+                        <div class="col-6"></div>
+                      </div>
+                    </div>
+                    <div class="account-profile_content">
+                      <table class="table table-striped dataTable">
+                        <thead>
+                          <tr>
+                            <th>Order ID</th>
+                            <th>Total Item</th>
+                            <th>Total Price</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1234567890</td>
+                            <td>1.00</td>
+                            <td>1000000</td>
+                            <td>2022-10-23 &nbsp; 15:37:56</td>
+                            <td>Pending</td>
+                          </tr>
+                          <tr>
+                            <td>1234567891</td>
+                            <td>2.00</td>
+                            <td>1000000</td>
+                            <td>2022-11-23 &nbsp; 15:37:56</td>
+                            <td>Pending</td>
+                          </tr>
+                          <tr>
+                            <td>1234567893</td>
+                            <td>3.00</td>
+                            <td>1000000</td>
+                            <td>2022-12-23 &nbsp; 15:37:56</td>
+                            <td>Pending</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <section class="innerMenu bordered">
-              <div class="container">
-                <div class="row">
-                  <div class="col-2"><a class="innerMenu-item" href="#">
-                      <div class="icon"><i class="fa-solid fa-earth-americas"></i></div><span>All Categories</span></a></div>
-                  <div class="col-2"><a class="innerMenu-item" href="#">
-                      <div class="icon"><i class="fa-solid fa-briefcase-medical"></i></div><span>Health</span></a></div>
-                  <div class="col-2"><a class="innerMenu-item" href="#">
-                      <div class="icon"><i class="fa-solid fa-laptop"></i></div><span>Electronic</span></a></div>
-                </div>
-              </div>
-            </section>
-            <section class="card-products">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <div class="thumbnail"><a href="#"><img src="images/thumbnail-dummy.jpg" alt="img"/></a></div>
-                      <div class="text">
-                        <div class="title">Smartphone 5G</div>
-                        <div class="price">$299.00</div><a class="btn btn-primary btn-small" href="#">Add to Cart</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="pagination">
-              <div class="container">
-                <div class="pagination-wrap">
-                  <div class="pagination-item prev"><a href="#"><img src="images/ic-chevron-left-white.png" alt="icon"/></a></div>
-                  <div class="pagination-item active"><a href="#"><span>1</span></a></div>
-                  <div class="pagination-item"><a href="#"><span>2</span></a></div>
-                  <div class="pagination-item"><a href="#"><span>3</span></a></div>
-                  <div class="pagination-item next"><a href="#"><img src="images/ic-chevron-right-white.png" alt="icon"/></a></div>
-                </div>
-              </div>
-            </section>
           </div>
         </main>
         <footer class="footer">

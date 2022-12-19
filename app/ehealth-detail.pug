@@ -1,0 +1,82 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "ehealth";
+
+
+block content
+  .ehealth.ehealth-detail
+    .container
+      section.ehealth-title
+        h1 E-Health
+      section.ehealth-userDetail
+        .container
+          .row
+            .col-md-4
+              .userDetail-item
+                .photo
+                  img(src="images/photo-profile.png", alt="profile")
+                .text
+                  h3 Nama Lengkap
+                  span.age 20 year old
+            .col-md-2
+              .userDetail-item
+                .text.center
+                  h3.text-center Height
+                  span.val 160 cm
+            .col-md-2
+              .userDetail-item
+                .text.center
+                  h3.text-center Weight
+                  span.val 60 kg
+            .col-md-4
+              .userDetail-item
+                .text.center
+                  h3 Gender
+                  span.val Male
+                a.btn.btn-primary(href="#") Save To Lead
+      section.ehealth-detailDesc
+        article
+          h3 Acne / Jerawat
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+      section.ehealth-recomProduct.card-products
+        .container
+          h3 Product Recomendations
+          .row
+            .col-md-4
+              .card
+                .thumbnail
+                  a(href="#")
+                    img(src="images/thumbnail-dummy.jpg", alt="img")
+                .text
+                  .title Smartphone 5G
+                  .price $299.00
+                  a.btn.btn-primary.btn-small(href="#") Add to Cart
+            .col-md-4
+              .card
+                .thumbnail
+                  a(href="#")
+                    img(src="images/thumbnail-dummy.jpg", alt="img")
+                .text
+                  .title Smartphone 5G
+                  .price $299.00
+                  a.btn.btn-primary.btn-small(href="#") Add to Cart
+            .col-md-4
+              .card
+                .thumbnail
+                  a(href="#")
+                    img(src="images/thumbnail-dummy.jpg", alt="img")
+                .text
+                  .title Smartphone 5G
+                  .price $299.00
+                  a.btn.btn-primary.btn-small(href="#") Add to Cart
+

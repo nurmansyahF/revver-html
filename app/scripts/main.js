@@ -245,6 +245,77 @@
       e.preventDefault();
     });
 
+
+    // Check All
+    $('.cart-list').each(function() {
+      var t = $(this),
+          check = t.find('.checkbox').find('input[type="checkbox"]'),
+          cAll = t.find('#checkAll');
+
+      var cc = t.find('input:checkbox:checked');
+
+      function toggle() {
+        var n = t.find('input:checkbox:checked').length;
+        if (n == 0) {
+            // act.removeClass('shown');
+        } else {
+            // act.addClass('shown');
+        }
+      }
+
+      cAll.click(function() {
+          check.not(this).prop('checked', this.checked);
+      })
+
+      check.change(function() {
+        toggle();
+      })
+      cc.change(function(){
+        if($(this).prop('checked')==false){
+          cAll.prop('checked', false);
+        }
+      })
+  })
+
+  // Data Tables
+  $('.dataTable').each(function(){
+    var t = $(this);
+    t.DataTable({
+      paging: false,
+      ordering: true,
+      bInfo: false
+    });
+  });
+
+  // chart colors
+  var colors = ['#007bff','#28a745','#333333','#c3e6cb','#dc3545','#6c757d'];
+
+  /* 3 donut charts */
+  var donutOptions = {
+    cutoutPercentage: 85,
+    legend: {position:'bottom', padding:5, labels: {pointStyle:'circle', usePointStyle:true}}
+  };
+
+  var chDonutData1 = {
+    labels: ['Bootstrap', 'Popper', 'Other'],
+    datasets: [
+      {
+        backgroundColor: colors.slice(0,3),
+        borderWidth: 0,
+        data: [74, 11, 40]
+      }
+    ]
+  };
+
+  var chDonut1 = document.getElementById("goalsChart");
+  if (chDonut1) {
+    new Chart(chDonut1, {
+        type: 'pie',
+        data: chDonutData1,
+        options: donutOptions
+    });
+  }
+
   }
 
 })();
