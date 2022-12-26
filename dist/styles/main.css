@@ -298,6 +298,10 @@ select.select { display: block; width: 100%; height: 2.5rem; border: 1px solid #
 
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) { width: 100%; }
 
+.fc-button-primary { padding: 16px 24px; border: 1px solid #F0A500 !important; border-radius: 8px; color: #FFF; font-weight: 400; transition: all .3s; display: inline-block; background: #F0A500 !important; font-size: 18px; line-height: 1.5em; }
+
+.fc-button-primary:hover { background: #F0A500; color: #ffffff; text-decoration: none; border-color: #F0A500; }
+
 /* General */
 @media (min-width: 1200px) { .container { max-width: 1248px; } }
 
@@ -1058,9 +1062,27 @@ p.center { background: #394264; position: absolute; text-align: center; font-siz
 
 .meetingModal .modal-title .btn-addicon { position: absolute; top: 0; right: 0; }
 
-.meetingdeleteModal .modal-header { position: relative; }
+.modal-header { position: relative; }
 
-.meetingdeleteModal .modal-header .btn-icondel { position: absolute; top: 0; right: 0; }
+.modal-header .btn-icondel { position: absolute; top: 0; right: 0; }
+
+.event { padding-bottom: 80px; }
+
+.event-calendar_action { margin-bottom: 40px; }
+
+.event-calendar_wrapper { background: #FFF; border-top: 10px solid #F0A500; padding: 24px; }
+
+.event-detail h4 { margin-bottom: 0; }
+
+.event-detail_thumbnail { width: 100%; padding: 30% 0; position: relative; overflow: hidden; border-radius: 20px; margin-bottom: 20px; }
+
+.event-detail_thumbnail img { width: 100%; height: 100%; position: absolute; top: 0; right: 0; object-fit: cover; object-position: center; }
+
+.event-detail_times { margin-bottom: 40px; }
+
+.event-detail_times ul { list-style: none; padding-left: 0; color: #A7A7A7; }
+
+.event-detail_desc article { color: #A7A7A7; }
 
 /* Responsive */
 

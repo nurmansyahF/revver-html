@@ -880,13 +880,53 @@ p
         top: 0
         right: 0
 .meetingdeleteModal
-  .modal
-    &-header
+.modal
+  &-header
+    position: relative
+    .btn-icondel
+      position: absolute
+      top: 0
+      right: 0
+
+// Event
+.event
+  padding-bottom: 80px
+  &-calendar
+    &_action
+      margin-bottom: 40px
+    &_wrapper
+      background: #FFF
+      border-top: 10px solid $primary
+      padding: 24px
+  &-detail
+    h4
+      margin-bottom: 0
+    &_thumbnail
+      width: 100%
+      padding: 30% 0
       position: relative
-      .btn-icondel
+      overflow: hidden
+      border-radius: 20px
+      margin-bottom: 20px
+      img
+        width: 100%
+        height: 100%
         position: absolute
         top: 0
         right: 0
+        object-fit: cover
+        object-position: center
+    &_times
+      margin-bottom: 40px
+      ul
+        list-style: none
+        padding-left: 0
+        color: #A7A7A7
+    &_desc
+      article
+        color: #A7A7A7
+
+
 
 
 

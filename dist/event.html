@@ -35,89 +35,20 @@
           </div>
         </header>
         <main>
-          <div class="goals">
+          <div class="event">
             <div class="container">
               <div class="page-title text-center">
-                <h1>Goals</h1>
+                <h1>Event</h1>
               </div>
-              <section class="goals-content">
-                <div class="row">
-                  <div class="col-md-8">
-                    <div class="goals-left">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="goals-charts">
-                            <div class="donut-chart-block block">
-                              <div class="donut-chart">
-                                <div class="portion-block" id="part1">
-                                  <div class="circle"></div>
-                                </div>
-                                <div class="portion-block" id="part2">
-                                  <div class="circle"></div>
-                                </div>
-                                <div class="portion-block" id="part3">
-                                  <div class="circle"></div>
-                                </div>
-                                <p class="center"></p>
-                              </div>
-                            </div>
-                            <div class="charts-title text-center">
-                              <h3>Your Dream</h3>
-                              <p>Deadline in 2 Month</p><a class="btn btn-link" data-toggle="modal" data-target="#setDreamModal">Change Your Dream</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="goals-progress">
-                            <div class="goals-desc">
-                              <p>Target jaringan: 2800 kanan | 2800 kiri</p>
-                              <p>Perhitungan dibawah hanya diambil dari bonus referral (Sponsor):</p>
-                            </div>
-                            <div class="goals-steps">
-                              <div class="steps-item"><b>1000 Platinum</b><span>per bulan</span>
-                                <div class="or"><span>or</span></div>
-                              </div>
-                              <div class="steps-item gold"><b>1000 Gold</b><span>per bulan</span>
-                                <div class="or"><span>or</span></div>
-                              </div>
-                              <div class="steps-item dark-gray"><b>1000 Silver</b><span>per bulan</span>
-                                <div class="or"><span>or</span></div>
-                              </div>
-                              <div class="steps-item brown"><b>1000 Bronze</b><span>per bulan</span>
-                                <div class="or"><span>or</span></div>
-                              </div>
-                              <div class="steps-item blue"><b>1000 Userpack</b><span>per bulan</span>
-                                <div class="or"><span>or</span></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="goals-history">
-                      <div class="history-title">
-                        <h5>Progress History</h5><a class="btn btn-primary btn-xsmall" href="#">Record Progress</a>
-                      </div>
-                      <div class="history-item">
-                        <div class="left">
-                          <div class="icon"><img src="images/ic-bulleyese.svg" alt="icon"/></div><span>1 Gold</span>
-                        </div>
-                        <div class="right"><span>17-10-2022</span></div>
-                      </div>
-                      <div class="history-item">
-                        <div class="left">
-                          <div class="icon"><img src="images/ic-bulleyese.svg" alt="icon"/></div><span>1 Gold</span>
-                        </div>
-                        <div class="right"><span>17-10-2022</span></div>
-                      </div>
-                    </div>
-                    <div class="goals-action text-right"><a class="btn btn-primary btn-xsmall" href="#resetModal" data-toggle="modal" data-target="#resetModal">Reset Progress</a></div>
-                  </div>
-                </div>
-              </section>
             </div>
+            <section class="event-calendar">
+              <div class="container">
+                <div class="event-calendar_action"><a class="btn btn-primary" href="#createEventModal" data-toggle="modal" data-target="#createEventModal">Create Event</a></div>
+                <div class="event-calendar_wrapper">
+                  <div id="calendar"></div>
+                </div>
+              </div>
+            </section>
           </div>
         </main>
         <footer class="footer">
@@ -164,29 +95,68 @@
         </footer>
       </div>
     </div>
-    <div class="modal fade" id="setDreamModal" tabindex="-1" role="dialog" aria-labelledby="setDreamModal" aria-hidden="true">
+    <div class="modal fade" id="createEventModal" tabindex="-1" role="dialog" aria-labelledby="createEventModal" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title">Set your dream</h3>
+            <h3 class="modal-title">Create Event</h3>
           </div>
           <div class="modal-body">
             <form action="#">
               <div class="form-group">
-                <label>What are you dream of?</label>
-                <input class="form-control" type="text" placeholder="eg: New Smartphone, Traveling"/>
+                <label>Event Name</label>
+                <input class="form-control" type="text" placeholder="eg: Meeting with new project"/>
               </div>
               <div class="form-group">
-                <label>How much is it?</label>
-                <input class="form-control" type="text" placeholder="eg: 5000000"/>
+                <label>Event Date</label>
+                <input class="form-control" type="text" placeholder="2022-12-30"/>
               </div>
               <div class="form-group">
-                <label>When exactly do you want it?</label>
-                <input class="form-control" type="text" placeholder="Saturday, 31-12-2022"/>
+                <label>Event Description</label>
+                <textarea class="form-control" type="text" placeholder="eg: Presentation to the new prospect"></textarea>
               </div>
               <div class="form-group">
-                <label>Describe why do you want it so bad?</label>
-                <textarea class="form-control" type="text" placeholder="eg: Remembering why you want it."></textarea>
+                <label>Event Location</label>
+                <textarea class="form-control" type="text" placeholder="eg: Coffee Shop Tunjungan Plaza"></textarea>
+              </div>
+              <div class="form-action">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <button class="btn btn-secondary btn-block" type="button" data-dismiss="modal">Close</button>
+                  </div>
+                  <div class="col-lg-6 col-12"><a class="btn btn-primary btn-block" href="#detailEventModal" data-toggle="modal" data-target="#detailEventModal" data-dismiss="modal">Save</a></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="deleteEventModal" tabindex="-1" role="dialog" aria-labelledby="detailEventModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="content-wrap">
+              <h3 class="modal-title">Edit Event</h3><a class="btn btn-icondel" href="#"><img src="images/ic-trash.svg" alt="icon" width="25" height="25"/></a>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="form-group">
+                <label>Event Name</label>
+                <input class="form-control" type="text" placeholder="eg: Meeting with new project"/>
+              </div>
+              <div class="form-group">
+                <label>Event Date</label>
+                <input class="form-control" type="text" placeholder="2022-12-30"/>
+              </div>
+              <div class="form-group">
+                <label>Event Description</label>
+                <textarea class="form-control" type="text" placeholder="eg: Presentation to the new prospect"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Event Location</label>
+                <textarea class="form-control" type="text" placeholder="eg: Coffee Shop Tunjungan Plaza"></textarea>
               </div>
               <div class="form-action">
                 <div class="row">
@@ -203,45 +173,28 @@
         </div>
       </div>
     </div>
-    <div class="modal fade" id="resetModal" tabindex="-1" role="dialog" aria-labelledby="resetModal" aria-hidden="true">
+    <div class="modal fade" id="detailEventModal" tabindex="-1" role="dialog" aria-labelledby="detailEventModal" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title">Record Progress</h3>
-            <div class="modal-desc">
-              <p>Enter the number of package you are recruited today</p>
-            </div>
-          </div>
           <div class="modal-body">
-            <form action="#">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Total Package"/>
-                  </div>
+            <div class="content-wrap">
+              <div class="event-detail">
+                <div class="event-detail_thumbnail"><img src="images/thumbnail-dummy.jpg" alt="img"/></div>
+                <div class="event-detail_times">
+                  <h4>Event Name</h4>
+                  <ul>
+                    <li>Date: 11-10-2022 15:09</li>
+                    <li>Location: Coffee Shop Tunjungan Plaza</li>
+                  </ul>
                 </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <select class="select" Select="Select" Package="Package">
-                      <option val="0">Bronze</option>
-                      <option val="1">Silver</option>
-                      <option val="2">Gold</option>
-                      <option val="3" selected="selected">Platinum</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="form-action">
-                <div class="row">
-                  <div class="col-lg-6 col-12">
-                    <button class="btn btn-secondary btn-block" type="button" data-dismiss="modal">Close</button>
-                  </div>
-                  <div class="col-lg-6 col-12">
-                    <button class="btn btn-primary btn-block" type="submit">Save</button>
-                  </div>
+                <div class="event-detail_desc">
+                  <h4>Description</h4>
+                  <article>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                  </article>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -256,5 +209,60 @@
     <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.1/index.global.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+      
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          timeZone: 'UTC',
+          headerToolbar: {
+            left: 'prev,next',
+            center: 'title',
+            right: ''
+          },
+          editable: true,
+          dayMaxEvents: true, // when too many events in a day, show the popover
+          events: 'https://fullcalendar.io/api/demo-feeds/events.json?overload-day'
+        });
+      
+        calendar.render();
+      });
+      //- document.addEventListener('DOMContentLoaded', function() {
+      //-     var calendarEl = document.getElementById('calendar');
+      //-     var calendar = new FullCalendar.Calendar(calendarEl, {
+      //-       timeZone: 'UTC',
+      //-       initialView: 'dayGridMonth',
+      //-       headerToolbar: {
+      //-         left: 'prev,next, addEventButton',
+      //-         center: 'title',
+      //-         right: ''
+      //-       },
+      //-       customButtons: {
+      //-       addEventButton: {
+      //-         text: 'Create Event',
+      //-         click: function() {
+      //-           var dateStr = prompt('Enter a date in YYYY-MM-DD format');
+      //-           var date = new Date(dateStr + 'T00:00:00'); // will be in local time
+      
+      //-           if (!isNaN(date.valueOf())) { // valid?
+      //-             calendar.addEvent({
+      //-               title: 'dynamic event',
+      //-               start: date,
+      //-               allDay: true
+      //-             });
+      //-             alert('Great. Now, update your database...');
+      //-           } else {
+      //-             alert('Invalid date.');
+      //-           }
+      //-         }
+      //-       },
+      //-       editable: true,
+      //-       dayMaxEvents: true, // when too many events in a day, show the popover
+      //-       events: 'https://fullcalendar.io/api/demo-feeds/events.json?overload-day'
+      //-     }
+      //-     });
+      //-     calendar.render();
+      //-   });
+    </script>
   </body>
 </html>

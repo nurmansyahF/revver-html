@@ -1,0 +1,149 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "event-calendar";
+
+
+block content
+  .event
+    .container
+      .page-title.text-center
+        h1 Event
+
+    section.event-calendar
+      .container
+        .event-calendar_action
+          a.btn.btn-primary(href="#createEventModal" data-toggle="modal" data-target="#createEventModal") Create Event
+        .event-calendar_wrapper
+          #calendar
+
+block modal
+  #createEventModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='createEventModal' aria-hidden='true')
+    .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h3.modal-title Create Event
+        .modal-body
+          form(action="#")
+            .form-group
+              label Event Name
+              input.form-control(type="text" placeholder="eg: Meeting with new project")
+            .form-group
+              label Event Date
+              input.form-control(type="text" placeholder="2022-12-30")
+            .form-group
+              label Event Description
+              textarea.form-control(type="text" placeholder="eg: Presentation to the new prospect")
+            .form-group
+              label Event Location
+              textarea.form-control(type="text" placeholder="eg: Coffee Shop Tunjungan Plaza")
+            .form-action
+              .row
+                .col-lg-6.col-12
+                  button.btn.btn-secondary.btn-block(type='button' data-dismiss='modal') Close
+                .col-lg-6.col-12
+                  //- button.btn.btn-primary.btn-block(type='submit') Save
+                  a.btn.btn-primary.btn-block(href='#detailEventModal' data-toggle="modal" data-target="#detailEventModal" data-dismiss="modal") Save
+  #deleteEventModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='detailEventModal' aria-hidden='true')
+    .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          .content-wrap
+            h3.modal-title Edit Event
+            a.btn.btn-icondel(href='#')
+              img(src="images/ic-trash.svg", alt="icon" width="25" height="25")
+        .modal-body
+          form(action="#")
+            .form-group
+              label Event Name
+              input.form-control(type="text" placeholder="eg: Meeting with new project")
+            .form-group
+              label Event Date
+              input.form-control(type="text" placeholder="2022-12-30")
+            .form-group
+              label Event Description
+              textarea.form-control(type="text" placeholder="eg: Presentation to the new prospect")
+            .form-group
+              label Event Location
+              textarea.form-control(type="text" placeholder="eg: Coffee Shop Tunjungan Plaza")
+            .form-action
+              .row
+                .col-lg-6.col-12
+                  button.btn.btn-secondary.btn-block(type='button' data-dismiss='modal') Close
+                .col-lg-6.col-12
+                  button.btn.btn-primary.btn-block(type='submit') Save
+  #detailEventModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='detailEventModal' aria-hidden='true')
+    .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-body
+          .content-wrap
+            .event-detail
+              .event-detail_thumbnail
+                img(src="images/thumbnail-dummy.jpg", alt="img")
+              .event-detail_times
+                h4 Event Name
+                ul
+                  li Date: 11-10-2022 15:09
+                  li Location: Coffee Shop Tunjungan Plaza
+              .event-detail_desc
+                h4 Description
+                article
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+
+block addscript
+  script.
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        timeZone: 'UTC',
+        headerToolbar: {
+          left: 'prev,next',
+          center: 'title',
+          right: ''
+        },
+        editable: true,
+        dayMaxEvents: true, // when too many events in a day, show the popover
+        events: 'https://fullcalendar.io/api/demo-feeds/events.json?overload-day'
+      });
+
+      calendar.render();
+    });
+    //- document.addEventListener('DOMContentLoaded', function() {
+    //-     var calendarEl = document.getElementById('calendar');
+    //-     var calendar = new FullCalendar.Calendar(calendarEl, {
+    //-       timeZone: 'UTC',
+    //-       initialView: 'dayGridMonth',
+    //-       headerToolbar: {
+    //-         left: 'prev,next, addEventButton',
+    //-         center: 'title',
+    //-         right: ''
+    //-       },
+    //-       customButtons: {
+    //-       addEventButton: {
+    //-         text: 'Create Event',
+    //-         click: function() {
+    //-           var dateStr = prompt('Enter a date in YYYY-MM-DD format');
+    //-           var date = new Date(dateStr + 'T00:00:00'); // will be in local time
+
+    //-           if (!isNaN(date.valueOf())) { // valid?
+    //-             calendar.addEvent({
+    //-               title: 'dynamic event',
+    //-               start: date,
+    //-               allDay: true
+    //-             });
+    //-             alert('Great. Now, update your database...');
+    //-           } else {
+    //-             alert('Invalid date.');
+    //-           }
+    //-         }
+    //-       },
+    //-       editable: true,
+    //-       dayMaxEvents: true, // when too many events in a day, show the popover
+    //-       events: 'https://fullcalendar.io/api/demo-feeds/events.json?overload-day'
+    //-     }
+    //-     });
+    //-     calendar.render();
+    //-   });
+
