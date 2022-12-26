@@ -8,7 +8,7 @@ block content
   .goals
     .container
       .page-title.text-center
-        h1 Goals
+        h1 Support
       section.goals-content
         .row
           .col-md-8
@@ -26,62 +26,102 @@ block content
                           .circle
                         p.center
                     .charts-title.text-center
-                      h3 Your Dream
-                      p Deadline in 2 Month
-                      a.btn.btn-link(href="#") Change Your Dream
+                      h3 Jurney to Champion
                 .col-md-6
-                  .goals-progress
-                    .goals-desc
-                      p Target jaringan: 2800 kanan | 2800 kiri
-                      p Perhitungan dibawah hanya diambil dari bonus referral (Sponsor):
-                    .goals-steps
-                      .steps-item
-                        b 1000 Platinum
-                        span per bulan
-                        .or
-                          span or
-                      .steps-item.gold
-                        b 1000 Gold
-                        span per bulan
-                        .or
-                          span or
-                      .steps-item.dark-gray
-                        b 1000 Silver
-                        span per bulan
-                        .or
-                          span or
-                      .steps-item.brown
-                        b 1000 Bronze
-                        span per bulan
-                        .or
-                          span or
-                      .steps-item.blue
-                        b 1000 Userpack
-                        span per bulan
-                        .or
-                          span or
+                  .myprogress
+                    h4 My Progress
+                    #accordion
+                      .card
+                        #headingOne.card-header
+                          h5.mb-0
+                            button.btn.btn-link.collapsed(data-toggle='collapse' data-target='#collapseOne' aria-expanded='false' aria-controls='collapseOne') Welcome
+                        #collapseOne.collapse(aria-labelledby='headingOne' data-parent='#accordion')
+                          .card-body
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      .card
+                        #headingTwo.card-header
+                          h5.mb-0
+                            button.btn.btn-link.collapsed(data-toggle='collapse' data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo') Pondasi
+                        #collapseTwo.collapse.show(aria-labelledby='headingTwo' data-parent='#accordion')
+                          .card-body
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .progress-aciton.row
+                              .col-6
+                                a.btn.btn-primary.btn-xsmall(href="#") Finish Task
+                              .col-6.text-right
+                                .status Status : Pending
+                      .card
+                        #headingThree.card-header
+                          h5.mb-0
+                            button.btn.btn-link.collapsed(data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree') Persentasi
+                        #collapseThree.collapse(aria-labelledby='headingThree' data-parent='#accordion')
+                          .card-body
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
           .col-md-4
-            .goals-history
-              .history-title
-                h5 Progress History
-                a.btn.btn-primary.btn-xsmall(href="#") Record Progress
-              .history-item
+            .downline-history
+              .downline-title
+                h5 My Downline
+              a.downline-item(href="#progressModal" data-toggle="modal" data-target="#progressModal")
                 .left
-                  .icon
-                    img(src="images/ic-bulleyese.svg", alt="icon")
-                  span 1 Gold
+                  .photo
+                    img(src="images/photo-profile.png", alt="photo")
+                  .text
+                    .h5 Nama Lengkap
+                    small Member
                 .right
-                  span 17-10-2022
-              .history-item
+                  span.tagstat Review Needed
+              .downline-item
                 .left
-                  .icon
-                    img(src="images/ic-bulleyese.svg", alt="icon")
-                  span 1 Gold
+                  .photo
+                    img(src="images/photo-profile.png", alt="photo")
+                  .text
+                    .h5 Nama Lengkap
+                    small Member
                 .right
-                  span 17-10-2022
-            .goals-action.text-right
-              a.btn.btn-primary.btn-xsmall(href="#") Reset Progress
+              a.downline-item(href="#progressModal" data-toggle="modal" data-target="#progressModal")
+                .left
+                  .photo
+                    img(src="images/photo-profile.png", alt="photo")
+                  .text
+                    .h5 Nama Lengkap
+                    small Member
+                .right
+                  span.tagstat Review Needed
 
 
+block modal
+  #progressModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='progressModal' aria-hidden='true')
+    .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h3.modal-title Set your dream
+          //- button.close(type='button' data-dismiss='modal' aria-label='Close')
+          //-   span(aria-hidden='true') &times;
+        .modal-body
+          .content-wrap
+            #accordion2
+              .card
+                #headingFour.card-header
+                  h5.mb-0
+                    button.btn.btn-link.collapsed(data-toggle='collapse' data-target='#collapseFour' aria-expanded='true' aria-controls='collapseFour') Welcome
+                #collapseFour.collapse.show(aria-labelledby='headingFour' data-parent='#accordion2')
+                  .card-body
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    .progress-aciton.row
+                      .col-6
+                        a.btn.btn-primary.btn-xsmall(href="#") Verify Progress
+                      .col-6.text-right
+                #headingFive.card-header
+                  h5.mb-0
+                    button.btn.btn-link.collapsed(data-toggle='collapse' data-target='#collapseFive' aria-expanded='true' aria-controls='collapseFour') Pondasi
+                #collapseFive.collapse.show(aria-labelledby='headingFive' data-parent='#accordion2')
+                  .card-body
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    .progress-aciton.row
+                      .col-6
+                        a.btn.btn-primary.btn-xsmall(href="#") Verify Progress
+                      .col-6.text-right
 
 

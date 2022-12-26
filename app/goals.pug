@@ -28,7 +28,7 @@ block content
                     .charts-title.text-center
                       h3 Your Dream
                       p Deadline in 2 Month
-                      a.btn.btn-link(href="#") Change Your Dream
+                      a.btn.btn-link(data-toggle="modal" data-target="#setDreamModal") Change Your Dream
                 .col-md-6
                   .goals-progress
                     .goals-desc
@@ -80,8 +80,64 @@ block content
                 .right
                   span 17-10-2022
             .goals-action.text-right
-              a.btn.btn-primary.btn-xsmall(href="#") Reset Progress
+              a.btn.btn-primary.btn-xsmall(href="#resetModal" data-toggle="modal" data-target="#resetModal") Reset Progress
 
 
+block modal
+  #setDreamModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='setDreamModal' aria-hidden='true')
+    .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h3.modal-title Set your dream
+          //- button.close(type='button' data-dismiss='modal' aria-label='Close')
+          //-   span(aria-hidden='true') &times;
+        .modal-body
+          form(action="#")
+            .form-group
+              label What are you dream of?
+              input.form-control(type="text" placeholder="eg: New Smartphone, Traveling")
+            .form-group
+              label How much is it?
+              input.form-control(type="text" placeholder="eg: 5000000")
+            .form-group
+              label When exactly do you want it?
+              input.form-control(type="text" placeholder="Saturday, 31-12-2022")
+            .form-group
+              label Describe why do you want it so bad?
+              textarea.form-control(type="text" placeholder="eg: Remembering why you want it.")
+            .form-action
+              .row
+                .col-lg-6.col-12
+                  button.btn.btn-secondary.btn-block(type='button' data-dismiss='modal') Close
+                .col-lg-6.col-12
+                  button.btn.btn-primary.btn-block(type='submit') Save
+  #resetModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='resetModal' aria-hidden='true')
+    .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h3.modal-title Record Progress
+          .modal-desc
+            p Enter the number of package you are recruited today
+          //- button.close(type='button' data-dismiss='modal' aria-label='Close')
+          //-   span(aria-hidden='true') &times;
+        .modal-body
+          form(action="#")
+            .row
+              .col-lg-6
+                .form-group
+                  input.form-control(type="text" placeholder="Total Package")
 
+              .col-lg-6
+                .form-group
+                  select.select(Select Package)
+                    option(val="0") Bronze
+                    option(val="1") Silver
+                    option(val="2") Gold
+                    option(val="3" selected) Platinum
+            .form-action
+              .row
+                .col-lg-6.col-12
+                  button.btn.btn-secondary.btn-block(type='button' data-dismiss='modal') Close
+                .col-lg-6.col-12
+                  button.btn.btn-primary.btn-block(type='submit') Save
 

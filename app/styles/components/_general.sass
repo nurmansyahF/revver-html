@@ -19,6 +19,10 @@ a
     outline: none !important
 
 .btn
+  &:hover,
+  &:focus
+    outline: 0
+    box-shadow: none
   &-primary
     padding: 16px 24px
     border: 1px solid $primary
@@ -44,6 +48,31 @@ a
         border-color: lighten($primary, 5%) !important
       &:focus-visible
         box-shadow: none !important
+  &-secondary
+    padding: 16px 24px
+    border: 1px solid #A7A7A7
+    border-radius: 8px
+    color: #A7A7A7
+    font-weight: 400
+    transition: all .3s
+    display: inline-block
+    background: #FFF
+    font-size: 18px
+    line-height: 1.5em
+    &:hover
+      background: $secondary
+      color: #ffffff
+      text-decoration: none
+      border-color: $secondary
+    &:not(:disabled):not(.disabled)
+      &:focus,
+      &:hover,
+      &:active
+        background-color: lighten($secondary, 5%) !important
+        box-shadow: 0 0 0 0.2rem #ffbb241f !important
+        border-color: lighten($secondary, 5%) !important
+      &:focus-visible
+        box-shadow: none !important
   &-border
     padding: 10px 8px
     border: 1px solid #000
@@ -51,7 +80,7 @@ a
   &-link
     padding: 16px 24px
     text-align: center
-    color: $text
+    color: $primary
     font-weight: 600
     text-decoration: none
     &:hover
@@ -68,7 +97,16 @@ a
     max-width: 100%
   &-xsmall
     padding: 2px 24px
-
+  &-addicon
+    padding: 16px
+    border-radius: 8px
+    background: $primary
+    font-weight: 800
+    font-size: 40px
+    line-height: 27px
+    color: #FFF
+    &:hover
+      color: #FFF
 .icon
   width: 80px
   height: 80px

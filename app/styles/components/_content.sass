@@ -232,24 +232,27 @@
         &:hover
           color: $primary
 
-  .notif-item
-    display: block
-    color: $text
+.notif-item
+  display: block
+  color: $text
+  text-decoration: none
+  &:not(:last-child)
+    margin-bottom: 32px
+  &:hover
     text-decoration: none
-    &:not(:last-child)
-      margin-bottom: 32px
-    &:hover
-      .notif-item_title
-        b
-          color: $primary
-    &_title
-      display: flex
-      align-items: center
-      margin-bottom: 24px
+    .notif-item_title
       b
-        font-weight: 500
-      .icon-med
-        margin-right: 16px
+        color: $primary
+    .notif-misc
+      color: $text
+  &_title
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    b
+      font-weight: 500
+    .icon-med
+      margin-right: 16px
 
 // Account
 .account
@@ -587,7 +590,8 @@
     padding-bottom: 80px
 
 // Goals
-.goals
+.goals,
+.downline
   padding-bottom: 200px
   &-charts
     .charts-title
@@ -654,7 +658,8 @@
     border: 1px solid $border
     border-radius: 32px
     height: 100%
-    .history
+    .history,
+    .downline
       &-title
         position: relative
         padding-bottom: 40px
@@ -667,9 +672,11 @@
           top: -4px
           right: 0
       &-item
+        color: $text
         display: flex
         justify-content: space-between
         align-items: center
+        text-decoration: none
         &:not(:last-child)
           margin-bottom: 20px
         .icon
@@ -690,6 +697,40 @@
             font-size: 24px
             line-height: 30px
 
+    .downline
+      &-item
+        .left
+          width: 60%
+          max-width: 60%
+          display: flex
+          align-items: center
+        .right
+          width: 40%
+          max-width: 40%
+          text-align: right
+        .photo
+          max-width: 70px
+          border-radius: 50px
+          margin-right: 10px
+          img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            object-position: center
+        .text
+          max-width: calc(100% - 80px)
+          .h5
+            font-weight: 700
+            margin-bottom: 0
+          small
+            font-size: 18px
+            line-height: 27px
+        .tagstat
+          color: #CF7500
+    a.downline-item
+      &:hover
+        .h5
+          color: $primary
   &-action
     padding-top: 24px
 
@@ -828,3 +869,27 @@ p
           cursor: pointer
     .btn-primary
       min-width: 250px
+
+.meetingModal
+  .modal
+    &-title
+      position: relative
+      padding-right: 90px
+      .btn-addicon
+        position: absolute
+        top: 0
+        right: 0
+.meetingdeleteModal
+  .modal
+    &-header
+      position: relative
+      .btn-icondel
+        position: absolute
+        top: 0
+        right: 0
+
+
+
+
+
+

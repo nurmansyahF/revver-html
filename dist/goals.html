@@ -63,7 +63,7 @@
                             </div>
                             <div class="charts-title text-center">
                               <h3>Your Dream</h3>
-                              <p>Deadline in 2 Month</p><a class="btn btn-link" href="#">Change Your Dream</a>
+                              <p>Deadline in 2 Month</p><a class="btn btn-link" data-toggle="modal" data-target="#setDreamModal">Change Your Dream</a>
                             </div>
                           </div>
                         </div>
@@ -113,7 +113,7 @@
                         <div class="right"><span>17-10-2022</span></div>
                       </div>
                     </div>
-                    <div class="goals-action text-right"><a class="btn btn-primary btn-xsmall" href="#">Reset Progress</a></div>
+                    <div class="goals-action text-right"><a class="btn btn-primary btn-xsmall" href="#resetModal" data-toggle="modal" data-target="#resetModal">Reset Progress</a></div>
                   </div>
                 </div>
               </section>
@@ -162,6 +162,88 @@
             </div>
           </div>
         </footer>
+      </div>
+    </div>
+    <div class="modal fade" id="setDreamModal" tabindex="-1" role="dialog" aria-labelledby="setDreamModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Set your dream</h3>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="form-group">
+                <label>What are you dream of?</label>
+                <input class="form-control" type="text" placeholder="eg: New Smartphone, Traveling"/>
+              </div>
+              <div class="form-group">
+                <label>How much is it?</label>
+                <input class="form-control" type="text" placeholder="eg: 5000000"/>
+              </div>
+              <div class="form-group">
+                <label>When exactly do you want it?</label>
+                <input class="form-control" type="text" placeholder="Saturday, 31-12-2022"/>
+              </div>
+              <div class="form-group">
+                <label>Describe why do you want it so bad?</label>
+                <textarea class="form-control" type="text" placeholder="eg: Remembering why you want it."></textarea>
+              </div>
+              <div class="form-action">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <button class="btn btn-secondary btn-block" type="button" data-dismiss="modal">Close</button>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <button class="btn btn-primary btn-block" type="submit">Save</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="resetModal" tabindex="-1" role="dialog" aria-labelledby="resetModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Record Progress</h3>
+            <div class="modal-desc">
+              <p>Enter the number of package you are recruited today</p>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Total Package"/>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <select class="select" Select="Select" Package="Package">
+                      <option val="0">Bronze</option>
+                      <option val="1">Silver</option>
+                      <option val="2">Gold</option>
+                      <option val="3" selected="selected">Platinum</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-action">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <button class="btn btn-secondary btn-block" type="button" data-dismiss="modal">Close</button>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <button class="btn btn-primary btn-block" type="submit">Save</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <script src="plugins/jquery/jquery-3.4.1.min.js"></script>
